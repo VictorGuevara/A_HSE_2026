@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Arimo:ital,wght@0,400..700;1,400..700&family=Medula+One&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+        
+        :root {
+            --color_morado: rgba(66, 0, 57, 1);
+            --color_blanco: rgba(255, 255, 255, 1);
+            --texto_gris: rgba(82, 82, 82, 1);
+            --texto_gris_claro: rgb(102, 102, 102);
+        }
+
+        body {
+            margin: 0 50px;
+            font-family: "Arimo", sans-serif;
+            font-optical-sizing: auto;
+            background: #f5f6fa;
+        }
+
+        .calendar_header {
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+        }
+
+        .calendar_header h1 {
+            font-size: 50px;
+            min-width: 90%;
+        }
+
+        .calendar_header .info_left p {
+            margin: 5px 0 20px 0;
+            color: var(--texto_gris_claro);
+            font-size: 18px;
+        }
+
+        .mes_info {
+            display: flex;
+            justify-content: space-between; 
+            align-items: center;            
+            margin-bottom: 10px;            
+            }
+
+.buttons button {
+  margin-left: 8px; 
+      
+}
+
+.info_left p {
+  margin-top: 0; 
+}
+
+.btn_pasar_mes {
+    padding: 5px 10px;
+    font-size: 20px;
+    font-weight: 600;
+    background: var(--color_morado);
+    color: var(--color_blanco);
+    border: 1px solid var(--color_morado);
+    transition: 0.5s;
+}
+
+.btn_pasar_mes:hover, .calendar_header button.update_actividad:hover {
+    background: var(--color_blanco);
+    border: 1px solid var(--color_morado);
+    color: var(--color_morado);
+    transition: 0.5s;
+}
+
+        .calendar_header button.update_actividad {
+                position: absolute;
+    right: 50px;
+    top: 50px;
+    background: var(--color_morado);
+    padding: 10px 15px;
+    color: var(--color_blanco);
+    border: none;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 14px;
+    transition: 0.5s;
+        }
+
+        
+
+        .nombre_dias_semana {
+            display: grid;
+            grid-template-columns: repeat(7, 1fr);
+            grid-gap: 10px;
+        }
+
+        label.label_name_day {
+            font-size: 12px;
+            font-weight: bold;
+            text-transform: uppercase;
+            transition: 0.5s;
+            background: var(--color_blanco);
+            color: var(--color_morado);
+            padding: 10px;
+            text-align: center;
+        }
+
+        .calendar_grid {
+            margin-top: 10px;
+            display: grid;
+            grid-template-columns: repeat(7, 1fr);
+            grid-gap: 10px;
+        }
+
+        .day_tag {
+            min-height: 350px;
+            padding: 5px;
+            background: var(--color_blanco);
+            border-radius: 5px;
+            border-top: 3px solid var(--color_morado);
+        }
+
+        h1.date_label {
+            margin: 5px 0;
+            font-size: 50px;
+        }
+
+        h4 {
+            margin: 5px 0;
+            font-size: 16px;
+            font-weight: bold;
+        }
+
+        h4.hora {
+            font-size: 14px;
+            color: var(--texto_gris);
+        }
+
+        p {
+            margin: 5px 0;
+            font-size: 14px;
+            color: var(texto_gris_claro);
+        }
+
+        div.actividad {
+            margin-bottom: 10px;
+        }
+
+        .prev_month {
+    background: #e6e6e6 !important;
+    color: #777;
+}
+
+.next_month {
+    background: #e6e6e6 !important;
+    color: #777;
+}
+
+.prev_month .date_label,
+.next_month .date_label {
+    opacity: 0.6;
+}
+
+    </style>
+</head>
+<body>
+  <main>
+    <header class="calendar_header">
+        <div class="info_left">
+            <div class="mes_info">
+                <h1>Diciembre - 2025</h1>
+                <button class="btn_pasar_mes" id="prevWeek">‹</button>
+                <button class="btn_pasar_mes" id="nextWeek">›</button>
+            </div>
+            <p id="texto_mes"></p>
+        </div>
+        <!-- <div class="info_right">
+            <button class="update_actividad" id="actualizar_actividad_fecha">Actualizar actividad</button>
+        </div> -->
+    </header>
+
+    <section class="calendar">
+        <div class="nombre_dias_semana">
+            <label class="label_name_day">Domíngo</label>
+            <label class="label_name_day">Lunes</label>
+            <label class="label_name_day">Martes</label>
+            <label class="label_name_day">Miércoles</label>
+            <label class="label_name_day">Jueves</label>
+            <label class="label_name_day">Viernes</label>
+            <label class="label_name_day">Sábado</label>
+        </div>
+        <div class="calendar_grid" id="calendar_grid">
+            <div class="day_tag">
+                <h1 class="date_label">01</h1>
+                <div class="actividad">
+                    <h4>Lorem, ipsum dolor.</h4>
+                    <h4 class="hora">00:00:00 a. m.</h4>
+                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Obcaecati qui repudiandae quo deserunt aliquam pariatur saepe sint minus. Obcaecati, nostrum?</p>
+                </div>
+                <div class="actividad">
+                    <h4>Lorem, ipsum dolor.</h4>
+                    <h4 class="hora">00:00:00 p. m.</h4>
+                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Obcaecati qui repudiandae quo deserunt aliquam pariatur saepe sint minus. Obcaecati, nostrum?</p>
+                </div>
+            </div>
+        </div>
+    </section>
+  </main>
+</div>
+<script type="text/javascript">
+ let mesActual = 1;
+let añoActual = 2026;
+
+async function cargarCalendario() {
+    const response = await fetch("actividades.json");
+    const tareas = await response.json();
+
+    const calendar = document.getElementById("calendar_grid");
+    calendar.innerHTML = "";
+
+    // ✅ Insertar texto del mes
+    const nombreMesActual = nombreMes(mesActual).toLowerCase();
+    const textoMes = tareas.info_meses[nombreMesActual] || "";
+    document.getElementById("texto_mes").textContent = textoMes;
+
+    // Datos del mes actual
+    const fechaInicio = new Date(añoActual, mesActual - 1, 1);
+    const diaSemanaInicio = fechaInicio.getDay(); // 0 = domingo
+    const diasEnMes = new Date(añoActual, mesActual, 0).getDate();
+
+    // Datos del mes anterior
+    const diasMesAnterior = new Date(añoActual, mesActual - 1, 0).getDate();
+
+    // ✅ 1. Pintar días del mes anterior
+    for (let i = diaSemanaInicio - 1; i >= 0; i--) {
+        const dia = diasMesAnterior - i;
+
+        const dayTag = document.createElement("div");
+        dayTag.classList.add("day_tag", "prev_month");
+
+    
+        const fechaPrev = `${añoActual}-${String(mesActual - 1).padStart(2, "0")}-${String(dia).padStart(2, "0")}`;
+
+dayTag.innerHTML = `
+    <h1 class="date_label">${String(dia).padStart(2, "0")}</h1>
+`;
+
+if (tareas[fechaPrev]) {
+    tareas[fechaPrev].forEach(t => {
+        const actividad = document.createElement("div");
+        actividad.classList.add("actividad");
+
+        actividad.innerHTML = `
+            <h4>${t.titulo}</h4>
+            <h4 class="hora">${t.hora}</h4>
+            <p>${t.descripcion}</p>
+        `;
+
+        dayTag.appendChild(actividad);
+    });
+}
+
+
+        calendar.appendChild(dayTag);
+    }
+
+    // ✅ 2. Pintar días del mes actual
+    for (let dia = 1; dia <= diasEnMes; dia++) {
+        const fecha = `${añoActual}-${String(mesActual).padStart(2, "0")}-${String(dia).padStart(2, "0")}`;
+
+        const dayTag = document.createElement("div");
+        dayTag.classList.add("day_tag");
+
+        dayTag.innerHTML = `
+            <h1 class="date_label">${String(dia).padStart(2, "0")}</h1>
+        `;
+
+        if (tareas[fecha]) {
+            tareas[fecha].forEach(t => {
+                const actividad = document.createElement("div");
+                actividad.classList.add("actividad");
+
+                actividad.innerHTML = `
+                    <h4>${t.titulo}</h4>
+                    <h4 class="hora">${t.hora}</h4>
+                    <p>${t.descripcion}</p>
+                `;
+
+                dayTag.appendChild(actividad);
+            });
+        }
+
+        calendar.appendChild(dayTag);
+    }
+
+    // ✅ 3. Pintar días del mes siguiente para completar la cuadrícula
+    const totalCeldas = calendar.children.length;
+    const faltantes = 35 - totalCeldas;
+
+    for (let dia = 1; dia <= faltantes; dia++) {
+        const dayTag = document.createElement("div");
+        dayTag.classList.add("day_tag", "next_month");
+
+        const fechaNext = `${añoActual}-${String(mesActual + 1).padStart(2, "0")}-${String(dia).padStart(2, "0")}`;
+
+dayTag.innerHTML = `
+    <h1 class="date_label">${String(dia).padStart(2, "0")}</h1>
+`;
+
+if (tareas[fechaNext]) {
+    tareas[fechaNext].forEach(t => {
+        const actividad = document.createElement("div");
+        actividad.classList.add("actividad");
+
+        actividad.innerHTML = `
+            <h4>${t.titulo}</h4>
+            <h4 class="hora">${t.hora}</h4>
+            <p>${t.descripcion}</p>
+        `;
+
+        dayTag.appendChild(actividad);
+    });
+}
+
+
+        calendar.appendChild(dayTag);
+    }
+
+    // ✅ Actualizar título del mes
+    document.querySelector(".mes_info h1").textContent =
+        `${nombreMes(mesActual)} - ${añoActual}`;
+}
+
+function nombreMes(m) {
+    const nombres = [
+        "Enero", "Febrero", "Marzo", "Abril", "Mayo", "Junio",
+        "Julio", "Agosto", "Septiembre", "Octubre", "Noviembre", "Diciembre"
+    ];
+    return nombres[m - 1];
+}
+
+document.getElementById("prevWeek").addEventListener("click", () => {
+    if (mesActual > 1) {
+        mesActual--;
+        cargarCalendario();
+    }
+});
+
+document.getElementById("nextWeek").addEventListener("click", () => {
+    if (mesActual < 12) {
+        mesActual++;
+        cargarCalendario();
+    }
+});
+
+document.addEventListener("keydown", (e) => {
+    if (e.key === "ArrowLeft") {
+        if (mesActual > 1) {
+            mesActual--;
+        } else {
+            mesActual = 12;
+            añoActual--;
+        }
+        cargarCalendario();
+    }
+
+    if (e.key === "ArrowRight") {
+        if (mesActual < 12) {
+            mesActual++;
+        } else {
+            mesActual = 1;
+            añoActual++;
+        }
+        cargarCalendario();
+    }
+});
+
+cargarCalendario();
+
+</script>
+</body>
+</html>

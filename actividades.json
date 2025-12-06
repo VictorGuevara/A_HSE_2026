@@ -1,0 +1,893 @@
+{
+  "info_meses": {
+    "enero": "Enero en la Iglesia Católica destaca por la Solemnidad de Santa María Madre de Dios el 1 de enero, el Día Mundial de la Paz y la celebración de la Epifanía del Señor, donde se recuerda la manifestación de Jesús a los pueblos representados por los Magos.",
+    "febrero": "Febrero incluye la Fiesta de la Presentación del Señor, también conocida como la Candelaria. Dependiendo del año, puede iniciar la Cuaresma con el Miércoles de Ceniza, marcando un tiempo de reflexión y preparación espiritual.",
+    "marzo": "Marzo continúa con la Cuaresma y celebra la Solemnidad de San José. En algunos años también puede caer la Semana Santa, incluyendo el Domingo de Ramos, el Triduo Pascual y la Pascua.",
+    "abril": "Abril suele estar marcado por la Semana Santa y la Pascua de Resurrección, la celebración más importante del cristianismo. También se celebra el Domingo de la Divina Misericordia.",
+    "mayo": "Mayo es el mes dedicado a la Virgen María, con diversas celebraciones marianas. Se celebra la Ascensión del Señor y, dependiendo del calendario, la Solemnidad de Pentecostés.",
+    "junio": "Junio incluye la Solemnidad del Corpus Christi, que honra la presencia real de Cristo en la Eucaristía. También se celebra el Sagrado Corazón de Jesús y el Inmaculado Corazón de María.",
+    "julio": "Julio incluye celebraciones importantes como la fiesta de Nuestra Señora del Carmen y la memoria de Santiago Apóstol, patrono de España y figura clave del cristianismo.",
+    "agosto": "Agosto destaca por la Solemnidad de la Asunción de la Virgen María, una de las fiestas marianas más importantes. También se celebra la Transfiguración del Señor y San Agustín.",
+    "septiembre": "Septiembre incluye la Natividad de la Virgen María, la Exaltación de la Santa Cruz y la memoria de Nuestra Señora de los Dolores, fiestas que invitan a la reflexión sobre la vida de María y la redención.",
+    "octubre": "Octubre es el mes del Rosario, dedicado a la oración mariana. Se celebra la Fiesta de Nuestra Señora del Rosario y el Domingo Mundial de las Misiones.",
+    "noviembre": "Noviembre inicia con la Solemnidad de Todos los Santos y la Conmemoración de los Fieles Difuntos. También se celebra la Solemnidad de Cristo Rey, que marca el cierre del año litúrgico.",
+    "diciembre": "Diciembre comienza con el Adviento, tiempo de preparación para la Navidad. Se celebra la Inmaculada Concepción y culmina con la Natividad del Señor, una de las celebraciones centrales de la fe cristiana."
+  },
+
+  "2026-01-04": [
+    {
+      "titulo": "Asamblea General de la Hermandad",
+      "hora": "10:00:00 a. m.",
+      "descripcion": "Asamblea general mensual de la Hermandad, fortaleciendo la unidad, organización y servicio comunitario."
+    },
+    {
+      "titulo": "Primer Asamblea General",
+      "hora": "10:00:00 a. m.",
+      "descripcion": "Asamblea general de la Hermandad, que se lleva cada primer domingo."
+    }
+  ],
+
+  "2026-01-06": [
+    {
+      "titulo": "Epifanía Del Señor",
+      "hora": "00:00:00 a. m. - 11:59:59 p. m.",
+      "descripcion": "La manifestación de Jesús al mundo, representada por la visita de los Reyes Magos, reconociendo a Cristo como luz y salvación universal."
+    },
+    {
+      "titulo": "Día De La Virgen De Los Remedios",
+      "hora": "06:00:00 p. m.",
+      "descripcion": "Procesión de nuestra Señora De Los Remedios, en la ciudad de Santa María."
+    }
+  ],
+
+  "2026-01-11": [
+    {
+      "titulo": "Bautismo Del Señor",
+      "hora": "00:00:00 a. m. - 11:59:59 p. m.",
+      "descripcion": "El Bautismo del Señor recuerda el momento en que Jesús fue bautizado en el río Jordán, manifestándose como Hijo amado de Dios e iniciando públicamente su misión salvadora."
+    }
+  ],
+
+  "2026-01-23": [
+    {
+      "titulo": "Excursión a Guatemala",
+      "hora": "07:00:00 p. m.",
+      "descripcion": "Primer día y salida de la excursión a la ciudad de Esquipulas, Guatemala."
+    }
+  ],
+
+  "2026-01-24": [
+    {
+      "titulo": "Excursión a Guatemala",
+      "hora": "00:00:00 a. m. - 11:59:59 p. m.",
+      "descripcion": "Segundo día y estadía en la ciudad de Esquipulas, Guatemala."
+    }
+  ],
+
+  "2026-01-25": [
+    {
+      "titulo": "Excursión a Guatemala",
+      "hora": "00:00:00 a. m. - 08:00:00 p. m.",
+      "descripcion": "Tercer día y salida de la ciudad de Esquipulas, Guatemala para El Salvador, terminando así la excursión."
+    }
+  ],
+
+  "2026-02-01": [
+    {
+      "titulo": "Asamblea General de la Hermandad",
+      "hora": "10:00:00 a. m.",
+      "descripcion": "Asamblea general mensual de la Hermandad, fortaleciendo la unidad, organización y servicio comunitario."
+    },
+    {
+      "titulo": "Asamblea General",
+      "hora": "10:00:00 a. m.",
+      "descripcion": "Asamblea general de la Hermandad, que se lleva cada primer domingo de cada mes."
+    }
+  ],
+
+  "2026-02-02": [
+    {
+      "titulo": "Virgen De Candelaria",
+      "hora": "00:00:00 a. m. - 11:59:59 p. m.",
+      "descripcion": "Procesión de nuestra Señora De Candelaria, en la ciudad de Jucuaran."
+    }
+  ],
+
+  "2026-02-15": [
+    {
+      "titulo": "Retiro Espiritual",
+      "hora": "07:00:00 a. m. - 05:00:00 p. m.",
+      "descripcion": "Retiro espiritual de la Hermandad, como preparación para el inicio del servicio durante la cuaresma."
+    }
+  ],
+
+  "2026-02-17": [
+    {
+      "titulo": "Besa Pies",
+      "hora": "00:00:00 a. m. - 11:59:59 p. m.",
+      "descripcion": "La parroquia celebra el tradicional Besa Pies, un acto de profunda devoción en el que la comunidad honra a Jesús crucificado, expresando gratitud, humildad y renovación espiritual."
+    }
+  ],
+
+  "2026-02-18": [
+    {
+      "titulo": "Miércoles de Ceniza",
+      "hora": "00:00:00 a. m. - 11:59:59 p. m.",
+      "descripcion": "La parroquia inicia el camino cuaresmal con la imposición de ceniza, invitando a la comunidad a la conversión, la oración y la preparación espiritual hacia la Pascua del Señor."
+    }
+  ],
+
+  "2026-02-20": [
+    {
+      "titulo": "Primer Viernes de Cuaresma",
+      "hora": "00:00:00 a. m. - 11:59:59 p. m.",
+      "descripcion": "Nuestra Hermandad vive el primer viernes cuaresmal con espíritu de penitencia, reflexionando sobre el amor de Cristo y fortaleciendo la preparación comunitaria hacia la Semana Santa."
+    }
+  ],
+
+  "2026-02-27": [
+    {
+      "titulo": "Segundo Viernes de Cuaresma",
+      "hora": "00:00:00 a. m. - 11:59:59 p. m.",
+      "descripcion": "La comunidad parroquial continúa su camino de conversión en este segundo viernes de Cuaresma, renovando el compromiso de oración, sacrificio y servicio fraterno."
+    }
+  ],
+
+  "2026-03-01": [
+    {
+      "titulo": "Asamblea General de la Hermandad",
+      "hora": "10:00:00 a. m.",
+      "descripcion": "Asamblea general mensual de la Hermandad, fortaleciendo la unidad, organización y servicio comunitario."
+    }
+  ],
+
+  "2026-03-06": [
+    {
+      "titulo": "Tercer Viernes de Cuaresma",
+      "hora": "00:00:00 a. m. - 11:59:59 p. m.",
+      "descripcion": "Celebramos el tercer viernes de Cuaresma meditando el camino de Jesús hacia la cruz, fortaleciendo nuestra fe y acompañando espiritualmente a la Hermandad en su misión."
+    }
+  ],
+
+  "2026-03-13": [
+    {
+      "titulo": "Cuarto Viernes de Cuaresma",
+      "hora": "00:00:00 a. m. - 11:59:59 p. m.",
+      "descripcion": "La parroquia vive el cuarto viernes cuaresmal como un momento de renovación interior, invitando a profundizar en la misericordia y el amor que Cristo entrega por nosotros."
+    }
+  ],
+
+  "2026-03-15": [
+    {
+      "titulo": "Procesión de los Niños",
+      "hora": "3:00 p. m.",
+      "descripcion": "La Hermandad realiza la Procesión de los Niños, animando a los más pequeños a crecer en la fe y a integrarse con alegría en la vida parroquial."
+    }
+  ],
+
+  "2026-03-20": [
+    {
+      "titulo": "Quinto Viernes de Cuaresma",
+      "hora": "00:00:00 a. m. - 11:59:59 p. m.",
+      "descripcion": "Nuestra Hermandad conmemora el quinto viernes de Cuaresma reflexionando sobre la entrega de Jesús, preparando el corazón para los días santos que se acercan."
+    }
+  ],
+
+  "2026-03-27": [
+    {
+      "titulo": "Sexto Viernes de Cuaresma",
+      "hora": "00:00:00 a. m. - 11:59:59 p. m.",
+      "descripcion": "La comunidad celebra el último viernes de Cuaresma antes de Semana Santa, meditando el sacrificio de Cristo y disponiéndose espiritualmente para acompañarlo en su pasión."
+    }
+  ],
+
+  "2026-03-29": [
+    {
+      "titulo": "Domingo de Ramos",
+      "hora": "00:00:00 a. m. - 11:59:59 p. m.",
+      "descripcion": "La parroquia celebra la entrada triunfal de Jesús a Jerusalén, iniciando con alegría y devoción la Semana Santa que nuestra Hermandad vive con profundo fervor."
+    }
+  ],
+
+  "2026-03-30": [
+    {
+      "titulo": "Lunes Santo",
+      "hora": "00:00:00 a. m. - 11:59:59 p. m.",
+      "descripcion": "Nuestra comunidad reflexiona sobre los últimos días de Jesús antes de su pasión, fortaleciendo la fe y preparando el corazón para los misterios que acompañaremos esta semana."
+    }
+  ],
+
+  "2026-03-31": [
+    {
+      "titulo": "Martes Santo",
+      "hora": "00:00:00 a. m. - 11:59:59 p. m.",
+      "descripcion": "La parroquia medita los anuncios de entrega y fidelidad de Jesús, invitando a la Hermandad a caminar con Él en silencio, oración y compromiso fraterno."
+    }
+  ], 
+
+  "2026-04-01": [
+    {
+      "titulo": "Miércoles Santo",
+      "hora": "00:00:00 a. m. - 11:59:59 p. m.",
+      "descripcion": "Celebramos el Miércoles Santo contemplando la entrega de Cristo y disponiéndonos a vivir con devoción el Triduo Pascual, centro de nuestra fe y tradición parroquial."
+    }
+  ],
+
+  "2026-04-02": [
+    {
+      "titulo": "Jueves Santo",
+      "hora": "00:00:00 a. m. - 11:59:59 p. m.",
+      "descripcion": "La parroquia conmemora la Última Cena, la institución de la Eucaristía y el mandamiento del amor, iniciando el Triduo Pascual con profundo recogimiento y gratitud."
+    }
+  ],
+
+  "2026-04-03": [
+    {
+      "titulo": "Viernes Santo",
+      "hora": "00:00:00 a. m. - 11:59:59 p. m.",
+      "descripcion": "Nuestra Hermandad acompaña con solemnidad la pasión y muerte del Señor, viviendo un día de silencio, oración y profundo respeto por el sacrificio redentor de Cristo."
+    }
+  ],
+
+  "2026-04-04": [
+    {
+      "titulo": "Sábado Santo",
+      "hora": "00:00:00 a. m. - 11:59:59 p. m.",
+      "descripcion": "La comunidad permanece en silencio junto al sepulcro del Señor, esperando con fe la luz de la Resurrección y preparando el corazón para la celebración pascual."
+    }
+  ],
+
+  "2026-04-05": [
+    {
+      "titulo": "Asamblea General de la Hermandad",
+      "hora": "10:00:00 a. m.",
+      "descripcion": "Asamblea general mensual de la Hermandad, fortaleciendo la unidad, organización y servicio comunitario."
+    },
+    {
+      "titulo": "Domingo de Resurrección",
+      "hora": "00:00:00 a. m. - 11:59:59 p. m.",
+      "descripcion": "Celebramos con alegría la Resurrección del Señor, renovando la esperanza de nuestra parroquia y fortaleciendo la misión de la Hermandad al servicio de Cristo resucitado."
+    }
+  ],
+
+  "2026-04-12": [
+    {
+      "titulo": "Procesión de la Divina Misericordia",
+      "hora": "3:00 p. m.",
+      "descripcion": "La parroquia celebra la Procesión de la Divina Misericordia, confiando en el amor compasivo del Señor y pidiendo su gracia para nuestras familias y la Hermandad."
+    }
+  ],
+
+  "2026-05-01": [
+    {
+      "titulo": "Inicio del Mes de la Virgen María - Rosario de Aurora",
+      "hora": "5:30 a. m.",
+      "descripcion": "La parroquia inicia el mes dedicado a la Virgen María con el Santo Rosario de Aurora, ofreciendo nuestras intenciones y agradecimientos a la Madre del Señor."
+    },
+    {
+      "titulo": "Inicio del Mes de la Virgen María - Rosario Vespertino",
+      "hora": "4:30 p. m.",
+      "descripcion": "La comunidad se reúne para iniciar el mes mariano con el rezo del Santo Rosario, fortaleciendo la devoción y el amor a nuestra Madre Santísima."
+    }
+  ],
+
+  "2026-05-03": [
+    {
+      "titulo": "Asamblea General de la Hermandad",
+      "hora": "10:00:00 a. m.",
+      "descripcion": "Asamblea general mensual de la Hermandad, fortaleciendo la unidad, organización y servicio comunitario."
+    },
+    {
+      "titulo": "Día de la Cruz",
+      "hora": "00:00:00 a. m. - 11:59:59 p. m.",
+      "descripcion": "La parroquia celebra el Día de la Cruz adornando con fe y alegría los altares, agradeciendo a Dios por la vida y pidiendo bendiciones para nuestros hogares."
+    }
+  ],
+
+  "2026-05-06": [
+    {
+      "titulo": "Rosario de la Hermandad",
+      "hora": "5:30 a. m.",
+      "descripcion": "La Hermandad dirige el Rosario de Aurora, ofreciendo este momento de oración por las necesidades de la comunidad y el fortalecimiento espiritual del grupo."
+    },
+    {
+      "titulo": "Rosario de la Hermandad",
+      "hora": "4:30 p. m.",
+      "descripcion": "Delegados de la Hermandad acompañan el rezo del Rosario vespertino, honrando a la Virgen María y animando a la comunidad a vivir la devoción mariana."
+    }
+  ],
+
+  "2026-05-13": [
+    {
+      "titulo": "Día de la Virgen de Fátima",
+      "hora": "00:00:00 a. m. - 11:59:59 p. m.",
+      "descripcion": "La parroquia honra a la Virgen de Fátima, confiando en su intercesión maternal y renovando la devoción que tantos fieles mantienen con profundo amor."
+    }
+  ],
+
+  "2026-05-23": [
+    {
+      "titulo": "Vigilia de Pentecostés",
+      "hora": "00:00:00 a. m. - 11:59:59 p. m.",
+      "descripcion": "La comunidad se reúne en oración para pedir la venida del Espíritu Santo, fortaleciendo la fe y preparando el corazón para la solemnidad de Pentecostés."
+    }
+  ],
+
+  "2026-05-24": [
+    {
+      "titulo": "Aniversario del Comedor María Auxiliadora",
+      "hora": "00:00:00 a. m. - 11:59:59 p. m.",
+      "descripcion": "La parroquia celebra un año más del Comedor María Auxiliadora, obra dedicada a servir con amor a los más necesitados y reflejar la misericordia de Cristo."
+    }
+  ],
+
+  "2026-05-27": [
+    {
+      "titulo": "50° Aniversario de la Hermandad",
+      "hora": "00:00:00 a. m. - 11:59:59 p. m.",
+      "descripcion": "La Hermandad del Santo Entierro de Cristo celebra 50 años de servicio, fe y tradición, agradeciendo a Dios por su guía y a la comunidad por su apoyo."
+    }
+  ],
+
+  "2026-05-31": [
+    {
+      "titulo": "Solemnidad de la Santísima Trinidad",
+      "hora": "00:00:00 a. m. - 11:59:59 p. m.",
+      "descripcion": "La parroquia celebra la Santísima Trinidad, reconociendo el amor del Padre, la gracia del Hijo y la fuerza del Espíritu Santo en nuestra vida comunitaria."
+    },
+    {
+      "titulo": "Venta de Pupusas de la Hermandad",
+      "hora": "00:00:00 a. m. - 11:59:59 p. m.",
+      "descripcion": "La Hermandad realiza su venta de pupusas para apoyar las necesidades de la parroquia, fortaleciendo la unidad y el servicio comunitario."
+    },
+    {
+      "titulo": "Clausura del Mes de la Virgen María",
+      "hora": "4:30 p. m.",
+      "descripcion": "La comunidad concluye el mes mariano agradeciendo a la Virgen por su protección y presentando nuestras intenciones en un acto de fe y devoción."
+    }
+  ],
+
+  "2026-06-01": [
+    {
+      "titulo": "Inicio de los 33 Días en Honor al Sagrado Corazón de Jesús - Rosario de Aurora",
+      "hora": "5:30 a. m.",
+      "descripcion": "La parroquia inicia los 33 días dedicados al Sagrado Corazón de Jesús con el Rosario de Aurora, ofreciendo nuestras intenciones y pidiendo bendiciones para toda la comunidad."
+    },
+    {
+      "titulo": "Inicio de los 33 Días en Honor al Sagrado Corazón de Jesús - Rosario Vespertino",
+      "hora": "4:30 p. m.",
+      "descripcion": "La comunidad se reúne para comenzar los 33 días en honor al Sagrado Corazón de Jesús con el Rosario vespertino, confiando nuestras vidas a su amor misericordioso."
+    }
+  ],
+
+  "2026-06-03": [
+    {
+      "titulo": "Rosario de la Hermandad",
+      "hora": "5:30 a. m.",
+      "descripcion": "La Hermandad dirige el Rosario al Sagrado Corazón de Jesús, ofreciendo este momento de oración por la unidad, el servicio y las necesidades de la comunidad parroquial."
+    },
+    {
+      "titulo": "Rosario de la Hermandad - Vespertino",
+      "hora": "4:30 p. m.",
+      "descripcion": "Delegados de la Hermandad acompañan el Rosario vespertino, animando a la comunidad a vivir la devoción al Sagrado Corazón con fe y entrega."
+    }
+  ],
+
+  "2026-06-04": [
+    {
+      "titulo": "Corpus Christi",
+      "hora": "00:00:00 a. m. - 11:59:59 p. m.",
+      "descripcion": "La parroquia celebra Corpus Christi adorando a Jesús Sacramentado y proclamando con fe su presencia viva en la Eucaristía, centro de nuestra vida cristiana."
+    }
+  ],
+
+  "2026-06-07": [
+    {
+      "titulo": "Asamblea General de la Hermandad",
+      "hora": "10:00:00 a. m.",
+      "descripcion": "Asamblea general mensual de la Hermandad, fortaleciendo la unidad, organización y servicio comunitario."
+    },
+    {
+      "titulo": "Solemnidad del Sagrado Corazón de Jesús",
+      "hora": "00:00:00 a. m. - 11:59:59 p. m.",
+      "descripcion": "La parroquia celebra la solemnidad del Sagrado Corazón de Jesús, confiando en su amor misericordioso y renovando nuestra entrega como comunidad de fe."
+    }
+  ],
+
+  "2026-06-08": [
+    {
+      "titulo": "Inmaculado Corazón de María",
+      "hora": "00:00:00 a. m. - 11:59:59 p. m.",
+      "descripcion": "La comunidad honra el Inmaculado Corazón de María, modelo de amor y entrega, pidiendo su intercesión maternal por nuestras familias y por la Hermandad."
+    }
+  ],
+
+  "2026-06-10": [
+    {
+      "titulo": "Rosario de la Hermandad",
+      "hora": "5:30 a. m.",
+      "descripcion": "La Hermandad dirige el Rosario al Sagrado Corazón de Jesús, ofreciendo este momento de oración por la unidad, el servicio y las necesidades de la comunidad parroquial."
+    },
+    {
+      "titulo": "Rosario de la Hermandad - Vespertino",
+      "hora": "4:30 p. m.",
+      "descripcion": "Delegados de la Hermandad acompañan el Rosario vespertino, animando a la comunidad a vivir la devoción al Sagrado Corazón con fe y entrega."
+    }
+  ],
+
+  "2026-06-17": [
+    {
+      "titulo": "Día del Padre",
+      "hora": "00:00:00 a. m. - 11:59:59 p. m.",
+      "descripcion": "La parroquia felicita y bendice a todos los padres, agradeciendo su entrega y pidiendo al Señor que fortalezca su misión en el hogar y la comunidad."
+    },
+    {
+      "titulo": "Rosario de la Hermandad",
+      "hora": "5:30 a. m.",
+      "descripcion": "La Hermandad ofrece el Rosario al Sagrado Corazón de Jesús pidiendo bendiciones especiales para todos los padres de nuestra comunidad."
+    }
+  ],
+
+  "2026-06-22": [
+    {
+      "titulo": "Día del Maestro",
+      "hora": "00:00:00 a. m. - 11:59:59 p. m.",
+      "descripcion": "La Hermandad celebra a los maestros que forman parte de nuestra comunidad, agradeciendo su servicio, vocación y dedicación al crecimiento humano y espiritual."
+    }
+  ],
+
+  "2026-06-24": [
+    {
+      "titulo": "Rosario de la Hermandad",
+      "hora": "5:30 a. m.",
+      "descripcion": "La Hermandad dirige el Rosario al Sagrado Corazón de Jesús, ofreciendo este momento de oración por la unidad, el servicio y las necesidades de la comunidad parroquial."
+    },
+    {
+      "titulo": "Rosario de la Hermandad - Vespertino",
+      "hora": "4:30 p. m.",
+      "descripcion": "Delegados de la Hermandad acompañan el Rosario vespertino, animando a la comunidad a vivir la devoción al Sagrado Corazón con fe y entrega."
+    }
+  ],
+
+  "2026-07-01": [
+    {
+      "titulo": "Rosario de la Hermandad",
+      "hora": "5:30 a. m.",
+      "descripcion": "La Hermandad dirige el Rosario al Sagrado Corazón de Jesús, ofreciendo este momento de oración por la unidad, el servicio y las necesidades de la comunidad parroquial."
+    },
+    {
+      "titulo": "Rosario de la Hermandad - Vespertino",
+      "hora": "4:30 p. m.",
+      "descripcion": "Delegados de la Hermandad acompañan el Rosario vespertino, animando a la comunidad a vivir la devoción al Sagrado Corazón con fe y entrega."
+    }
+  ],
+
+  "2026-07-05": [
+    {
+      "titulo": "Asamblea General de la Hermandad",
+      "hora": "10:00:00 a. m.",
+      "descripcion": "Asamblea general mensual de la Hermandad, fortaleciendo la unidad, organización y servicio comunitario."
+    }
+  ],
+
+  "2026-07-03": [
+    {
+      "titulo": "Clausura de los 33 Días en Honor al Sagrado Corazón de Jesús - Rosario de Aurora",
+      "hora": "5:30 a. m.",
+      "descripcion": "La parroquia concluye los 33 días dedicados al Sagrado Corazón de Jesús con el Rosario de Aurora, agradeciendo su amor y ofreciendo nuestras vidas a su corazón misericordioso."
+    },
+    {
+      "titulo": "Clausura de los 33 Días en Honor al Sagrado Corazón de Jesús - Rosario Vespertino",
+      "hora": "4:30 p. m.",
+      "descripcion": "La comunidad se reúne para cerrar los 33 días en honor al Sagrado Corazón de Jesús con el Rosario vespertino, renovando nuestra fe y confianza en su presencia en medio de nosotros."
+    }
+  ],
+
+  "2026-07-16": [
+    {
+      "titulo": "Fiesta Patronal en Honor a Nuestra Señora del Carmen",
+      "hora": "00:00:00 a. m. - 11:59:59 p. m.",
+      "descripcion": "La parroquia celebra con devoción a Nuestra Señora del Carmen, patrona de nuestra comunidad, agradeciendo su protección maternal y su intercesión constante."
+    }
+  ],
+
+  "2026-07-19": [
+    {
+      "titulo": "Excursión a la Iglesia de Santa Ana",
+      "hora": "00:00:00 a. m. - 11:59:59 p. m.",
+      "descripcion": "La Hermandad realiza una excursión a la Iglesia de Santa Ana con el propósito de recaudar fondos para fortalecer sus actividades y el servicio comunitario."
+    }
+  ],
+
+  "2026-07-25": [
+    {
+      "titulo": "Santiago Apóstol - Fiestas Patronales Diocesanas",
+      "hora": "00:00:00 a. m. - 11:59:59 p. m.",
+      "descripcion": "La diócesis celebra a Santiago Apóstol, patrono diocesano, invitando a la comunidad a participar con fe y alegría en las festividades litúrgicas y comunitarias."
+    }
+  ],
+
+  "2026-08-02": [
+    {
+      "titulo": "Asamblea General de la Hermandad",
+      "hora": "10:00:00 a. m.",
+      "descripcion": "Asamblea general mensual de la Hermandad, fortaleciendo la unidad, organización y servicio comunitario."
+    }
+  ],
+
+  "2026-08-05": [
+    {
+      "titulo": "La Transfiguración del Señor",
+      "hora": "00:00:00 a. m. - 11:59:59 p. m.",
+      "descripcion": "La comunidad celebra la Transfiguración del Señor, contemplando la gloria de Cristo y renovando nuestra fe en su presencia viva entre nosotros."
+    }
+  ],
+
+  "2026-08-06": [
+    {
+      "titulo": "Divino Salvador del Mundo",
+      "hora": "00:00:00 a. m. - 11:59:59 p. m.",
+      "descripcion": "La parroquia honra al Divino Salvador del Mundo, titular de nuestra nación, pidiendo su bendición y protección para todas las familias."
+    }
+  ],
+
+  "2026-08-07": [
+    {
+      "titulo": "12° Aniversario de la Capilla de Adoración",
+      "hora": "00:00:00 a. m. - 11:59:59 p. m.",
+      "descripcion": "La comunidad celebra el 12° aniversario de la Capilla de Adoración, agradeciendo a Jesús Sacramentado por su presencia constante y por las gracias derramadas durante estos años."
+    }
+  ],
+
+  "2026-08-13": [
+    {
+      "titulo": "Inicio del Triduo de Rosarios de Aurora en Honor a la Asunción de la Virgen María",
+      "hora": "5:30 a. m.",
+      "descripcion": "La parroquia inicia el triduo de Rosarios de Aurora en honor a la Asunción de la Virgen María, ofreciendo nuestras intenciones a la Madre del Señor."
+    }
+  ],
+
+  "2026-08-14": [
+    {
+      "titulo": "San Maximiliano María Kolbe",
+      "hora": "00:00:00 a. m. - 11:59:59 p. m.",
+      "descripcion": "La comunidad recuerda a San Maximiliano María Kolbe, mártir de la caridad, ejemplo de entrega total a Dios y a los hermanos."
+    },
+    {
+      "titulo": "Segundo Día del Triduo de Rosarios de Aurora",
+      "hora": "5:30 a. m.",
+      "descripcion": "La parroquia continúa el triduo de Rosarios de Aurora en honor a la Asunción de la Virgen María, pidiendo su intercesión maternal."
+    }
+  ],
+
+  "2026-08-15": [
+    {
+      "titulo": "Asunción de la Virgen María",
+      "hora": "00:00:00 a. m. - 11:59:59 p. m.",
+      "descripcion": "La parroquia celebra la solemnidad de la Asunción de la Virgen María, elevando nuestras oraciones a la Madre de Dios que reina en el cielo."
+    },
+    {
+      "titulo": "Tercer Día del Triduo de Rosarios de Aurora",
+      "hora": "5:30 a. m.",
+      "descripcion": "La comunidad concluye el triduo de Rosarios de Aurora en honor a la Asunción de la Virgen María, agradeciendo su protección y amor maternal."
+    }
+  ],
+
+  "2026-09-06": [
+    {
+      "titulo": "Asamblea General de la Hermandad",
+      "hora": "10:00:00 a. m.",
+      "descripcion": "Asamblea general mensual de la Hermandad, fortaleciendo la unidad, organización y servicio comunitario."
+    }
+  ],
+
+  "2026-09-05": [
+    {
+      "titulo": "Santa Teresa de Calcuta",
+      "hora": "00:00:00 a. m. - 11:59:59 p. m.",
+      "descripcion": "La comunidad recuerda a Santa Teresa de Calcuta, ejemplo de servicio, humildad y amor a los más necesitados."
+    }
+  ],
+
+  "2026-09-15": [
+    {
+      "titulo": "Procesión Dolores de María",
+      "hora": "00:00:00 a. m. - 11:59:59 p. m.",
+      "descripcion": "La parroquia acompaña la Procesión de los Dolores de María, meditando el sufrimiento de la Madre del Señor y su entrega amorosa."
+    }
+  ],
+
+  "2026-09-24": [
+    {
+      "titulo": "Nuestra Señora de las Mercedes",
+      "hora": "00:00:00 a. m. - 11:59:59 p. m.",
+      "descripcion": "La parroquia celebra a Nuestra Señora de las Mercedes, pidiendo su intercesión y protección para todas las familias de la comunidad."
+    }
+  ], 
+  
+  "2026-10-01": [
+    {
+      "titulo": "Inicio del Mes Misionero - Rosario Misionero de Aurora",
+      "hora": "5:30 a. m.",
+      "descripcion": "La parroquia inicia el Mes Misionero con el Rosario Misionero de Aurora, ofreciendo nuestras intenciones por la evangelización y el servicio pastoral."
+    },
+    {
+      "titulo": "Inicio del Mes Misionero - Rosario Misionero Vespertino",
+      "hora": "4:30 p. m.",
+      "descripcion": "La comunidad se reúne para comenzar el Mes Misionero con el Rosario Misionero vespertino, pidiendo la guía del Espíritu Santo para toda la Iglesia."
+    }
+  ],
+
+  "2026-10-04": [
+    {
+      "titulo": "Asamblea General de la Hermandad",
+      "hora": "10:00:00 a. m.",
+      "descripcion": "Asamblea general mensual de la Hermandad, fortaleciendo la unidad, organización y servicio comunitario."
+    },
+    {
+      "titulo": "San Francisco de Asís",
+      "hora": "00:00:00 a. m. - 11:59:59 p. m.",
+      "descripcion": "La parroquia celebra a San Francisco de Asís, modelo de humildad, pobreza y amor por la creación."
+    }
+  ],
+
+  "2026-10-07": [
+    {
+      "titulo": "Rosario Misionero de la Hermandad - Aurora",
+      "hora": "5:30 a. m.",
+      "descripcion": "La Hermandad dirige el Rosario Misionero de Aurora, ofreciendo oraciones por la unidad y la misión evangelizadora de la Iglesia."
+    },
+    {
+      "titulo": "Rosario Misionero de la Hermandad - Vespertino",
+      "hora": "4:30 p. m.",
+      "descripcion": "La comunidad se une al Rosario Misionero vespertino dirigido por la Hermandad, fortaleciendo la fe y el compromiso misionero."
+    }
+  ],
+
+  "2026-10-14": [
+    {
+      "titulo": "Rosario Misionero de la Hermandad - Aurora",
+      "hora": "5:30 a. m.",
+      "descripcion": "La Hermandad dirige el Rosario Misionero de Aurora, ofreciendo este momento de oración por las misiones y los misioneros del mundo."
+    },
+    {
+      "titulo": "Rosario Misionero de la Hermandad - Vespertino",
+      "hora": "4:30 p. m.",
+      "descripcion": "La comunidad participa en el Rosario Misionero vespertino, pidiendo la intercesión de la Virgen María para la obra evangelizadora."
+    }
+  ],
+
+  "2026-10-18": [
+    {
+      "titulo": "DOMUND - Domingo Mundial de las Misiones",
+      "hora": "00:00:00 a. m. - 11:59:59 p. m.",
+      "descripcion": "La parroquia celebra el Domingo Mundial de las Misiones, orando por los misioneros y apoyando la labor evangelizadora de la Iglesia en todo el mundo."
+    }
+  ],
+
+  "2026-10-21": [
+    {
+      "titulo": "Rosario Misionero de la Hermandad - Aurora",
+      "hora": "5:30 a. m.",
+      "descripcion": "La Hermandad dirige el Rosario Misionero de Aurora, ofreciendo oraciones por la misión de la Iglesia y la conversión de los corazones."
+    },
+    {
+      "titulo": "Rosario Misionero de la Hermandad - Vespertino",
+      "hora": "4:30 p. m.",
+      "descripcion": "La comunidad se reúne para el Rosario Misionero vespertino, fortaleciendo la fe y el espíritu misionero."
+    }
+  ],
+
+  "2026-10-28": [
+    {
+      "titulo": "Rosario Misionero de la Hermandad - Aurora",
+      "hora": "5:30 a. m.",
+      "descripcion": "La Hermandad dirige el Rosario Misionero de Aurora, ofreciendo este momento de oración por la misión evangelizadora de la Iglesia."
+    },
+    {
+      "titulo": "Rosario Misionero de la Hermandad - Vespertino",
+      "hora": "4:30 p. m.",
+      "descripcion": "La comunidad participa en el Rosario Misionero vespertino, pidiendo la intercesión de la Virgen María para la obra misionera."
+    }
+  ],
+
+  "2026-10-31": [
+    {
+      "titulo": "Clausura del Mes Misionero",
+      "hora": "00:00:00 a. m. - 11:59:59 p. m.",
+      "descripcion": "La parroquia concluye el Mes Misionero agradeciendo a Dios por la labor evangelizadora y renovando el compromiso de anunciar el Evangelio."
+    },
+    {
+      "titulo": "Clausura del Mes Misionero - Rosario Misionero de Aurora",
+      "hora": "5:30 a. m.",
+      "descripcion": "La comunidad concluye el Mes Misionero con el Rosario Misionero de Aurora, ofreciendo nuestras vidas al servicio del Evangelio."
+    },
+    {
+      "titulo": "Clausura del Mes Misionero - Rosario Misionero Vespertino",
+      "hora": "4:30 p. m.",
+      "descripcion": "La parroquia finaliza el Mes Misionero con el Rosario Misionero vespertino, agradeciendo la guía del Espíritu Santo en la misión de la Iglesia."
+    }
+  ],
+
+  "2026-11-01": [
+    {
+      "titulo": "Asamblea General de la Hermandad",
+      "hora": "10:00:00 a. m.",
+      "descripcion": "Asamblea general mensual de la Hermandad, fortaleciendo la unidad, organización y servicio comunitario."
+    },
+    {
+      "titulo": "Procesión de las Ánimas",
+      "hora": "00:00:00 a. m. - 11:59:59 p. m.",
+      "descripcion": "La comunidad acompaña la Procesión de las Ánimas, orando por todos los fieles difuntos y confiando en la misericordia de Dios."
+    }
+  ],
+
+  "2026-11-02": [
+    {
+      "titulo": "Conmemoración de Todos los Fieles Difuntos",
+      "hora": "00:00:00 a. m. - 11:59:59 p. m.",
+      "descripcion": "La parroquia ora por todos los fieles difuntos, pidiendo al Señor que los reciba en su presencia y conceda consuelo a sus familias."
+    }
+  ],
+
+  "2026-11-12": [
+    {
+      "titulo": "Inicio del Trecenario en Honor a Santa Catarina de Alejandría",
+      "hora": "00:00:00 a. m. - 11:59:59 p. m.",
+      "descripcion": "La comunidad inicia el Trecenario en honor a Santa Catarina de Alejandría, preparándose espiritualmente para su fiesta patronal."
+    }
+  ],
+
+  "2026-11-16": [
+    {
+      "titulo": "Inicio de la Novena en Honor a Santa Catarina de Alejandría",
+      "hora": "00:00:00 a. m. - 11:59:59 p. m.",
+      "descripcion": "La parroquia comienza la Novena dedicada a Santa Catarina de Alejandría, pidiendo su intercesión y protección."
+    }
+  ],
+
+  "2026-11-21": [
+    {
+      "titulo": "Fiesta Patronal en Honor a Nuestra Señora de la Paz",
+      "hora": "00:00:00 a. m. - 11:59:59 p. m.",
+      "descripcion": "La comunidad celebra a Nuestra Señora de la Paz, patrona de la diócesis, agradeciendo su intercesión y protección maternal."
+    }
+  ],
+
+  "2026-11-22": [
+    {
+      "titulo": "Jesucristo Rey del Universo",
+      "hora": "00:00:00 a. m. - 11:59:59 p. m.",
+      "descripcion": "La parroquia celebra la solemnidad de Jesucristo Rey del Universo, renovando la fe en Cristo como centro y Señor de nuestras vidas."
+    }
+  ],
+
+  "2026-11-25": [
+    {
+      "titulo": "Santa Catalina de Alejandría",
+      "hora": "00:00:00 a. m. - 11:59:59 p. m.",
+      "descripcion": "La comunidad honra a Santa Catalina de Alejandría, modelo de sabiduría y valentía cristiana."
+    },
+    {
+      "titulo": "Venta de Pupusas",
+      "hora": "00:00:00 a. m. - 11:59:59 p. m.",
+      "descripcion": "La Hermandad realiza una venta de pupusas en honor a Santa Catalina de Alejandría, apoyando las actividades parroquiales."
+    }
+  ],
+
+  "2026-12-03": [
+    {
+      "titulo": "San Francisco Javier",
+      "hora": "00:00:00 a. m. - 11:59:59 p. m.",
+      "descripcion": "La parroquia celebra a San Francisco Javier, patrono de las misiones, ejemplo de entrega y evangelización."
+    }
+  ],
+
+  "2026-12-04": [
+    {
+      "titulo": "72º Aniversario de la Diócesis",
+      "hora": "00:00:00 a. m. - 11:59:59 p. m.",
+      "descripcion": "La diócesis celebra un año más de misión pastoral, agradeciendo a Dios por su guía y protección."
+    }
+  ],
+
+  "2026-12-06": [
+    {
+      "titulo": "Asamblea General de la Hermandad",
+      "hora": "10:00:00 a. m.",
+      "descripcion": "Asamblea general mensual de la Hermandad, fortaleciendo la unidad, organización y servicio comunitario."
+    },
+    {
+      "titulo": "Triduo de Rosarios de Aurora en Honor a la Inmaculada Concepción - Primer Día",
+      "hora": "5:30 a. m.",
+      "descripcion": "La comunidad inicia el Triduo de Rosarios de Aurora en honor a la Inmaculada Concepción, ofreciendo nuestras intenciones a la Virgen María."
+    }
+  ],
+
+  "2026-12-07": [
+    {
+      "titulo": "Triduo de Rosarios de Aurora en Honor a la Inmaculada Concepción - Segundo Día",
+      "hora": "5:30 a. m.",
+      "descripcion": "La parroquia continúa el Triduo de Rosarios de Aurora en honor a la Inmaculada Concepción, pidiendo su intercesión maternal."
+    },
+    {
+      "titulo": "Procesión de la Inmaculada Concepción de María",
+      "hora": "00:00:00 a. m. - 11:59:59 p. m.",
+      "descripcion": "La comunidad acompaña la procesión en honor a la Inmaculada Concepción, celebrando su pureza y su amor maternal."
+    }
+  ],
+
+  "2026-12-08": [
+    {
+      "titulo": "Triduo de Rosarios de Aurora en Honor a la Inmaculada Concepción - Tercer Día",
+      "hora": "5:30 a. m.",
+      "descripcion": "La comunidad concluye el Triduo de Rosarios de Aurora en honor a la Inmaculada Concepción, agradeciendo su protección."
+    }
+  ],
+
+  "2026-12-12": [
+    {
+      "titulo": "Procesión de Nuestra Señora de Guadalupe",
+      "hora": "00:00:00 a. m. - 11:59:59 p. m.",
+      "descripcion": "La parroquia honra a Nuestra Señora de Guadalupe con una procesión llena de fe y devoción."
+    },
+    {
+      "titulo": "Venta de Pupusas",
+      "hora": "00:00:00 a. m. - 11:59:59 p. m.",
+      "descripcion": "La Hermandad realiza una venta de pupusas en honor a Nuestra Señora de Guadalupe, apoyando las actividades parroquiales."
+    }
+  ],
+
+  "2026-12-16": [
+    {
+      "titulo": "Inicio de la Novena en Honor a la Natividad del Señor",
+      "hora": "00:00:00 a. m. - 11:59:59 p. m.",
+      "descripcion": "La parroquia inicia la Novena de Navidad, preparándose espiritualmente para el nacimiento de Jesús."
+    }
+  ],
+
+  "2026-12-20": [
+    {
+      "titulo": "Pastorela y Villancicos",
+      "hora": "00:00:00 a. m. - 11:59:59 p. m.",
+      "descripcion": "La comunidad celebra la alegría de la Navidad con una pastorela y cantos tradicionales."
+    }
+  ],
+
+  "2026-12-24": [
+    {
+      "titulo": "Misa de Gallo",
+      "hora": "00:00:00 a. m. - 11:59:59 p. m.",
+      "descripcion": "La parroquia celebra la Misa de Gallo, dando la bienvenida al nacimiento del Salvador."
+    }
+  ],
+
+  "2026-12-25": [
+    {
+      "titulo": "Natividad del Señor",
+      "hora": "00:00:00 a. m. - 11:59:59 p. m.",
+      "descripcion": "La comunidad celebra el nacimiento de Jesús, luz del mundo y esperanza de la humanidad."
+    }
+  ],
+
+  "2026-12-27": [
+    {
+      "titulo": "28º Aniversario de Ordenación Sacerdotal de Monseñor Wiliam Ernesto Iraheta Rivera",
+      "hora": "00:00:00 a. m. - 11:59:59 p. m.",
+      "descripcion": "La diócesis felicita a Monseñor Wiliam Ernesto Iraheta Rivera en su aniversario sacerdotal, agradeciendo su servicio y entrega pastoral."
+    },
+    {
+      "titulo": "Convivio Navideño de la Hermandad",
+      "hora": "00:00:00 a. m. - 11:59:59 p. m.",
+      "descripcion": "La Hermandad celebra su convivio navideño, compartiendo en fraternidad y agradeciendo a Dios por un año más de servicio comunitario."
+    }
+  ],
+
+  "2026-12-31": [
+    {
+      "titulo": "Misa de Fin de Año",
+      "hora": "00:00:00 a. m. - 11:59:59 p. m.",
+      "descripcion": "La comunidad despide el año con una misa de acción de gracias, encomendando el nuevo año a la protección del Señor."
+    }
+  ]
+}
