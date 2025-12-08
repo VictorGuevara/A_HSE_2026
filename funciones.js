@@ -335,3 +335,39 @@ const cargar_funciones = async () => {
 
 // Cargamos.
 cargar_funciones();
+
+document.getElementById("prevWeek").addEventListener("click", () => {
+    if (mesActual > 1) {
+        mesActual--;
+        cargar_funciones();
+    }
+});
+
+document.getElementById("nextWeek").addEventListener("click", () => {
+    if (mesActual < 12) {
+        mesActual++;
+        cargar_funciones();
+    }
+});
+
+document.addEventListener("keydown", (e) => {
+    if (e.key === "ArrowLeft") {
+        if (mesActual > 1) {
+            mesActual--;
+        } else {
+            mesActual = 12;
+            añoActual--;
+        }
+        cargar_funciones();
+    }
+
+    if (e.key === "ArrowRight") {
+        if (mesActual < 12) {
+            mesActual++;
+        } else {
+            mesActual = 1;
+            añoActual++;
+        }
+        cargar_funciones();
+    }
+});
