@@ -284,42 +284,47 @@ function configurarModal() {
 function activarSwipeCalendario() {
     const calendar = document.getElementById("calendar_grid");
 
-    let touchStartX = 0;
-    let touchEndX = 0;
-    let swipeBloqueado = false; // ✅ evita saltos múltiples
+    let startX = 0;
+    let startY = 0;
+    let endX = 0;
+    let endY = 0;
+    let swipeBloqueado = false;
 
     calendar.addEventListener("touchstart", (e) => {
-        touchStartX = e.changedTouches[0].screenX;
+        startX = e.changedTouches[0].clientX;
+        startY = e.changedTouches[0].clientY;
     });
 
     calendar.addEventListener("touchend", (e) => {
-        touchEndX = e.changedTouches[0].screenX;
+        endX = e.changedTouches[0].clientX;
+        endY = e.changedTouches[0].clientY;
         manejarSwipe();
     });
 
     function manejarSwipe() {
-        if (swipeBloqueado) return; // ✅ evita múltiples ejecuciones
+        if (swipeBloqueado) return;
 
-        const distancia = touchEndX - touchStartX;
+        const distX = endX - startX;
+        const distY = endY - startY;
 
-        // Sensibilidad del swipe
-        if (Math.abs(distancia) < 50) return;
+        // ✅ 1. Detectar si el movimiento fue horizontal
+        if (Math.abs(distX) < 60) return; // muy corto
+        if (Math.abs(distY) > Math.abs(distX)) return; // fue scroll vertical
 
-        swipeBloqueado = true; // ✅ bloquear
+        // ✅ 2. Bloquear múltiples swipes
+        swipeBloqueado = true;
 
-        if (distancia < 0) {
+        if (distX < 0) {
             // 👉 Swipe izquierda → mes siguiente
-            if (mesActual < 12) {
-                mesActual++;
-            } else {
+            if (mesActual < 12) mesActual++;
+            else {
                 mesActual = 1;
                 añoActual++;
             }
         } else {
             // 👈 Swipe derecha → mes anterior
-            if (mesActual > 1) {
-                mesActual--;
-            } else {
+            if (mesActual > 1) mesActual--;
+            else {
                 mesActual = 12;
                 añoActual--;
             }
@@ -327,7 +332,7 @@ function activarSwipeCalendario() {
 
         cargar_funciones();
 
-        // ✅ desbloquear después de un pequeño delay
+        // ✅ 3. Desbloquear después de un pequeño delay
         setTimeout(() => {
             swipeBloqueado = false;
         }, 300);
