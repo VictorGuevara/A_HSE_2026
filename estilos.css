@@ -1,0 +1,377 @@
+@import url("https://fonts.googleapis.com/css2?family=Arimo:ital,wght@0,400..700;1,400..700&family=Medula+One&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
+
+:root {
+    --color_dorado: rgba(183, 148, 33, 1);
+    --color_morado: rgba(150, 10, 135, 1);
+    --color_blanco: rgba(255, 255, 255, 1);
+    --texto_gris: rgba(82, 82, 82, 1);
+    --texto_gris_claro: rgb(102, 102, 102);
+}
+
+body {
+    margin: 0 50px;
+    font-family: "Arimo", sans-serif;
+    font-optical-sizing: auto;
+    background: var(--color_blanco);
+}
+
+.calendar_header {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+}
+
+.calendar_header h1 {
+    font-size: 50px;
+    min-width: 90%;
+    color: var(--color_morado);
+}
+
+.calendar_header .info_left p {
+    margin: 5px 0 20px 0;
+    color: var(--texto_gris_claro);
+    font-size: 18px;
+}
+
+.mes_info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.buttons button {
+    margin-left: 8px;
+}
+
+.info_left p {
+    margin-top: 0;
+}
+
+.btn_pasar_mes {
+    padding: 5px 10px;
+    font-size: 20px;
+    font-weight: 600;
+    background: var(--color_morado);
+    color: var(--color_blanco);
+    border: 1px solid var(--color_morado);
+    transition: 0.5s;
+}
+
+.btn_pasar_mes:hover,
+.calendar_header button.update_actividad:hover {
+    background: var(--color_blanco);
+    border: 1px solid var(--color_morado);
+    color: var(--color_morado);
+    transition: 0.5s;
+}
+
+.calendar_header button.update_actividad {
+    position: absolute;
+    right: 50px;
+    top: 50px;
+    background: var(--color_morado);
+    padding: 10px 15px;
+    color: var(--color_blanco);
+    border: none;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 14px;
+    transition: 0.5s;
+}
+
+.nombre_dias_semana {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    grid-gap: 10px;
+}
+
+.info_right {
+    margin: auto;
+    text-align: center;
+}
+.info_right img {
+    display: inline;
+    width: 38%;
+    transition: 0.5s;
+}
+
+label.label_name_day {
+    font-size: 12px;
+    font-weight: bold;
+    text-transform: uppercase;
+    transition: 0.5s;
+    background: var(--color_blanco);
+    color: var(--color_morado);
+    padding: 10px;
+    text-align: center;
+}
+
+.calendar_grid {
+    margin-top: 10px;
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    grid-gap: 10px;
+}
+
+.day_tag {
+    min-height: 350px;
+    padding: 5px;
+    background: var(--color_blanco);
+    border-radius: 5px;
+    border-top: 3px solid var(--color_morado);
+}
+
+h1.date_label {
+    margin: 5px 0;
+    font-size: 50px;
+}
+
+h4 {
+    color: var(--color_morado);
+    margin: 5px 0;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+h4.hora {
+    font-size: 14px;
+    color: var(--texto_gris);
+}
+
+p {
+    margin: 5px 0;
+    font-size: 14px;
+    color: var(texto_gris_claro);
+}
+
+div.actividad {
+    margin-bottom: 10px;
+}
+
+.prev_month {
+    background: #e6e6e6 !important;
+    color: #777;
+}
+
+.next_month {
+    background: #e6e6e6 !important;
+    color: #777;
+}
+
+.prev_month .date_label,
+.next_month .date_label {
+    opacity: 0.6;
+}
+
+.logo_footer {
+    margin: auto;
+    text-align: center;
+    display: none;
+    transition: 0.5;
+}
+
+.logo_footer img {
+    width: 75%;
+}
+
+/* ============================
+   MODAL GENERAL
+============================ */
+.modal {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.6);
+    justify-content: center;
+    align-items: center;
+    z-index: 999;
+}
+
+.modal-content {
+    background: #fff;
+    width: 90%;
+    max-width: 420px;
+    max-height: 80vh;
+    overflow-y: auto;
+    padding: 16px 20px;
+    border-radius: 12px;
+    animation: fadeIn 0.2s ease-out;
+}
+
+.close {
+    float: right;
+    font-size: 1.6rem;
+    cursor: pointer;
+    color: #444;
+}
+
+.activity-item {
+    margin-bottom: 15px;
+}
+
+.activity-item h3 {
+    margin: 0;
+    font-size: 1.1rem;
+    color: var(--color_morado);
+}
+
+.activity-item p {
+    margin: 4px 0;
+    font-size: 0.9rem;
+}
+
+@keyframes fadeIn {
+    from {
+        transform: scale(0.9);
+        opacity: 0;
+    }
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+/* ============================
+   TABLET (pantallas medianas)
+============================ */
+@media (max-width: 1024px) {
+    .info_right img {
+        width: 60%;
+    }
+}
+
+/* ============================
+   MÓVIL (pantallas pequeñas)
+============================ */
+@media (max-width: 768px) {
+    .calendar_header {
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+
+    .calendar_header h1 {
+        min-width: 85%;
+    }
+
+    .calendar_header .info_left p {
+        font-size: 16px;
+    }
+
+    .nombre_dias_semana {
+        grid-template-columns: repeat(7, 1fr);
+        gap: 5px;
+    }
+
+    label.label_name_day {
+        font-size: 10px;
+        padding: 4px 0;
+        border-radius: 4px;
+    }
+
+    /* Parte del calendario... */
+    .calendar_grid {
+        grid-gap: 5px;
+    }
+
+    h1.date_label {
+        margin: 3px 0;
+        font-size: 30px;
+    }
+
+    .day_tag {
+        position: relative;
+        padding: 6px;
+        min-height: 50px;
+        background: #ffffff;
+        border-radius: 6px;
+        overflow: hidden;
+    }
+
+    /* Ocultar actividades */
+    .day_tag .actividad {
+        display: none;
+    }
+
+    /* Estilo del contador */
+    .activity_count {
+        position: absolute;
+        bottom: 4px;
+        right: 4px;
+        background: var(--color_morado);
+        color: #fff;
+        font-size: 12px;
+        padding: 2px 6px;
+        border-radius: 5px;
+        font-weight: bold;
+    }
+
+    .logo_footer {
+        display: block;
+        transition: 0.5;
+    }
+
+    .info_right img {
+        display: none;
+    }
+}
+
+@media (max-width: 425px) {
+    body {
+        margin: 20px;
+    }
+
+    .calendar_header h1 {
+        font-size: 30px;
+        min-width: 75%;
+    }
+
+    .calendar_header .info_left p {
+        font-size: 12px;
+    }
+
+    .nombre_dias_semana {
+        grid-template-columns: repeat(7, 1fr);
+        gap: 1px;
+    }
+
+    label.label_name_day {
+        font-size: 8px;
+        padding: 2px 0;
+    }
+
+    /* Parte del calendario... */
+
+    .calendar_grid {
+        margin-top: 5px;
+        grid-gap: 2px;
+    }
+
+    h1.date_label {
+        margin: 2px 0;
+        font-size: 20px;
+    }
+
+    .modal-content {
+        margin: 20px;
+    }
+}
+
+@media (max-width: 375px) {
+    .calendar_header .info_left p {
+        font-size: 10px;
+    }
+
+    label.label_name_day {
+        font-size: 7px;
+        padding: 2px 0;
+    }
+
+    h1.date_label {
+        margin: 2px 0;
+        font-size: 18px;
+    }
+
+    .activity_count {
+        font-size: 10px;
+    }
+}
