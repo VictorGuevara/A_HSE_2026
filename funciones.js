@@ -288,54 +288,57 @@ function activarSwipeCalendario() {
     let startY = 0;
     let endX = 0;
     let endY = 0;
-    let swipeBloqueado = false;
 
     calendar.addEventListener("touchstart", (e) => {
-        startX = e.changedTouches[0].clientX;
-        startY = e.changedTouches[0].clientY;
+        const touch = e.changedTouches[0];
+        startX = touch.clientX;
+        startY = touch.clientY;
     });
 
     calendar.addEventListener("touchend", (e) => {
-        endX = e.changedTouches[0].clientX;
-        endY = e.changedTouches[0].clientY;
-        manejarSwipe();
+        const touch = e.changedTouches[0];
+        endX = touch.clientX;
+        endY = touch.clientY;
+
+        procesarSwipe();
     });
 
-    function manejarSwipe() {
-        if (swipeBloqueado) return;
-
+    function procesarSwipe() {
         const distX = endX - startX;
         const distY = endY - startY;
 
-        // ✅ 1. Detectar si el movimiento fue horizontal
-        if (Math.abs(distX) < 60) return; // muy corto
-        if (Math.abs(distY) > Math.abs(distX)) return; // fue scroll vertical
+        // ✅ 1. Ignorar si el movimiento fue más vertical que horizontal
+        if (Math.abs(distY) > Math.abs(distX)) return;
 
-        // ✅ 2. Bloquear múltiples swipes
-        swipeBloqueado = true;
+        // ✅ 2. Ignorar movimientos pequeños
+        if (Math.abs(distX) < 60) return;
 
+        // ✅ 3. Swipe izquierda → mes siguiente
         if (distX < 0) {
-            // 👉 Swipe izquierda → mes siguiente
-            if (mesActual < 12) mesActual++;
-            else {
-                mesActual = 1;
-                añoActual++;
-            }
-        } else {
-            // 👈 Swipe derecha → mes anterior
-            if (mesActual > 1) mesActual--;
-            else {
-                mesActual = 12;
-                añoActual--;
-            }
+            avanzarMes();
         }
+        // ✅ 4. Swipe derecha → mes anterior
+        else {
+            retrocederMes();
+        }
+    }
 
+    function avanzarMes() {
+        if (mesActual < 12) mesActual++;
+        else {
+            mesActual = 1;
+            añoActual++;
+        }
         cargar_funciones();
+    }
 
-        // ✅ 3. Desbloquear después de un pequeño delay
-        setTimeout(() => {
-            swipeBloqueado = false;
-        }, 300);
+    function retrocederMes() {
+        if (mesActual > 1) mesActual--;
+        else {
+            mesActual = 12;
+            añoActual--;
+        }
+        cargar_funciones();
     }
 }
 
