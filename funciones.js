@@ -288,58 +288,60 @@ function activarSwipeCalendario() {
     let startY = 0;
     let endX = 0;
     let endY = 0;
+    let isSwiping = false;
 
     calendar.addEventListener("touchstart", (e) => {
-        const touch = e.changedTouches[0];
-        startX = touch.clientX;
-        startY = touch.clientY;
+        const t = e.changedTouches[0];
+        startX = t.clientX;
+        startY = t.clientY;
+        isSwiping = false;
     });
+
+    calendar.addEventListener(
+        "touchmove",
+        (e) => {
+            const t = e.changedTouches[0];
+            const distX = t.clientX - startX;
+            const distY = t.clientY - startY;
+
+            // ✅ Si el movimiento es más horizontal que vertical → activar swipe
+            if (Math.abs(distX) > Math.abs(distY)) {
+                isSwiping = true;
+                e.preventDefault(); // ✅ BLOQUEA el scroll vertical
+            }
+        },
+        { passive: false },
+    );
 
     calendar.addEventListener("touchend", (e) => {
-        const touch = e.changedTouches[0];
-        endX = touch.clientX;
-        endY = touch.clientY;
+        if (!isSwiping) return; // ✅ Si no fue swipe horizontal, no hacer nada
 
-        procesarSwipe();
-    });
+        const t = e.changedTouches[0];
+        endX = t.clientX;
 
-    function procesarSwipe() {
         const distX = endX - startX;
-        const distY = endY - startY;
 
-        // ✅ 1. Ignorar si el movimiento fue más vertical que horizontal
-        if (Math.abs(distY) > Math.abs(distX)) return;
-
-        // ✅ 2. Ignorar movimientos pequeños
+        // ✅ Ignorar movimientos pequeños
         if (Math.abs(distX) < 60) return;
 
-        // ✅ 3. Swipe izquierda → mes siguiente
         if (distX < 0) {
-            avanzarMes();
+            // 👉 Swipe izquierda → mes siguiente
+            if (mesActual < 12) mesActual++;
+            else {
+                mesActual = 1;
+                añoActual++;
+            }
+        } else {
+            // 👈 Swipe derecha → mes anterior
+            if (mesActual > 1) mesActual--;
+            else {
+                mesActual = 12;
+                añoActual--;
+            }
         }
-        // ✅ 4. Swipe derecha → mes anterior
-        else {
-            retrocederMes();
-        }
-    }
 
-    function avanzarMes() {
-        if (mesActual < 12) mesActual++;
-        else {
-            mesActual = 1;
-            añoActual++;
-        }
         cargar_funciones();
-    }
-
-    function retrocederMes() {
-        if (mesActual > 1) mesActual--;
-        else {
-            mesActual = 12;
-            añoActual--;
-        }
-        cargar_funciones();
-    }
+    });
 }
 
 // Función que carga las funciones...
