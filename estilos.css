@@ -1,11 +1,12 @@
 @import url("https://fonts.googleapis.com/css2?family=Arimo:ital,wght@0,400..700;1,400..700&family=Medula+One&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
 
 :root {
-    --color_dorado: rgba(183, 148, 33, 1);
-    --color_morado: rgba(150, 10, 135, 1);
+    --color_dorado: rgba(255, 215, 0, 1);
+    --color_morado: rgba(112, 21, 135, 1);
     --color_blanco: rgba(255, 255, 255, 1);
     --texto_gris: rgba(82, 82, 82, 1);
-    --texto_gris_claro: rgb(102, 102, 102);
+    --texto_gris_claro: rgba(102, 102, 102, 1);
+    --gris_ultra_claro: rgba(231, 231, 231, 1);
 }
 
 body {
@@ -119,6 +120,21 @@ label.label_name_day {
     background: var(--color_blanco);
     border-radius: 5px;
     border-top: 3px solid var(--color_morado);
+    box-shadow: 1px 1px 5px var(--gris_ultra_claro);
+    transition: 0.5s;
+}
+
+.day_tag:hover,
+.day_tag.hoy {
+    background: var(--color_morado);
+    border-top: 3px solid var(--color_dorado);
+    color: var(--color_blanco);
+    transition: 0.5s;
+}
+
+.day_tag:hover h4 {
+    color: var(--color_dorado);
+    transition: 0.5s;
 }
 
 h1.date_label {
@@ -231,6 +247,34 @@ div.actividad {
     }
 }
 
+.btn_pdf {
+    background: var(--color_morado);
+    color: white;
+    border: none;
+    padding: 10px 18px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: 600;
+    transition: 0.5s;
+}
+
+.btn_pdf:hover {
+    background: var(--color_dorado);
+    color: var(--color_morado);
+    transition: 0.5s;
+}
+
+.calendar_footer {
+    text-align: center;
+    padding: 15px 10px;
+    font-size: 12px;
+    color: var(--color_dorado);
+    background: var(--color_morado);
+    border-top: 1px solid var(--color_dorado);
+    margin-top: 20px;
+}
+
 /* ============================
    TABLET (pantallas medianas)
 ============================ */
@@ -305,13 +349,27 @@ div.actividad {
         font-weight: bold;
     }
 
+    .info_right img {
+        display: none;
+    }
+
     .logo_footer {
         display: block;
         transition: 0.5;
     }
 
-    .info_right img {
-        display: none;
+    .logo_footer img {
+        width: 50%;
+    }
+
+    .btn_pdf {
+        width: 100%;
+        margin-top: 10px;
+    }
+
+    .calendar_footer {
+        font-size: 10px;
+        padding: 12px 8px;
     }
 }
 

@@ -16,14 +16,9 @@
 
   "2026-01-04": [
     {
-      "titulo": "Asamblea General de la Hermandad",
-      "hora": "10:00:00 a. m.",
-      "descripcion": "Asamblea general mensual de la Hermandad, fortaleciendo la unidad, organización y servicio comunitario."
-    },
-    {
       "titulo": "Primer Asamblea General",
       "hora": "10:00:00 a. m.",
-      "descripcion": "Asamblea general de la Hermandad, que se lleva cada primer domingo."
+      "descripcion": "Asamblea general mensual de la Hermandad, fortaleciendo la unidad, organización y servicio comunitario."
     }
   ],
 
@@ -50,7 +45,7 @@
 
   "2026-01-23": [
     {
-      "titulo": "Excursión a Guatemala",
+      "titulo": "Excursión a Guatemala 1° Día",
       "hora": "07:00:00 p. m.",
       "descripcion": "Primer día y salida de la excursión a la ciudad de Esquipulas, Guatemala."
     }
@@ -58,7 +53,7 @@
 
   "2026-01-24": [
     {
-      "titulo": "Excursión a Guatemala",
+      "titulo": "Excursión a Guatemala 2° Día",
       "hora": "00:00:00 a. m. - 11:59:59 p. m.",
       "descripcion": "Segundo día y estadía en la ciudad de Esquipulas, Guatemala."
     }
@@ -66,7 +61,7 @@
 
   "2026-01-25": [
     {
-      "titulo": "Excursión a Guatemala",
+      "titulo": "Excursión a Guatemala 3° Día",
       "hora": "00:00:00 a. m. - 08:00:00 p. m.",
       "descripcion": "Tercer día y salida de la ciudad de Esquipulas, Guatemala para El Salvador, terminando así la excursión."
     }
@@ -77,11 +72,6 @@
       "titulo": "Asamblea General de la Hermandad",
       "hora": "10:00:00 a. m.",
       "descripcion": "Asamblea general mensual de la Hermandad, fortaleciendo la unidad, organización y servicio comunitario."
-    },
-    {
-      "titulo": "Asamblea General",
-      "hora": "10:00:00 a. m.",
-      "descripcion": "Asamblea general de la Hermandad, que se lleva cada primer domingo de cada mes."
     }
   ],
 
@@ -203,7 +193,7 @@
       "hora": "00:00:00 a. m. - 11:59:59 p. m.",
       "descripcion": "La parroquia medita los anuncios de entrega y fidelidad de Jesús, invitando a la Hermandad a caminar con Él en silencio, oración y compromiso fraterno."
     }
-  ], 
+  ],
 
   "2026-04-01": [
     {
@@ -608,8 +598,8 @@
       "hora": "00:00:00 a. m. - 11:59:59 p. m.",
       "descripcion": "La parroquia celebra a Nuestra Señora de las Mercedes, pidiendo su intercesión y protección para todas las familias de la comunidad."
     }
-  ], 
-  
+  ],
+
   "2026-10-01": [
     {
       "titulo": "Inicio del Mes Misionero - Rosario Misionero de Aurora",

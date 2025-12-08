@@ -1,69 +1,87 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="estilos.css">
-</head>
-<body>
-  <main>
-    <header class="calendar_header">
-        <div class="info_left">
-            <div class="mes_info">
-                <h1>Diciembre - 2025</h1>
-                <button class="btn_pasar_mes" id="prevWeek">‹</button>
-                <button class="btn_pasar_mes" id="nextWeek">›</button>
-            </div>
-            <p id="texto_mes"></p>
-        </div>
-        <!-- <div class="info_right">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+        <link rel="stylesheet" href="estilos.css" />
+    </head>
+    <body>
+        <main>
+            <header class="calendar_header">
+                <div class="info_left">
+                    <div class="mes_info">
+                        <h1>Diciembre - 2025</h1>
+                        <button class="btn_pasar_mes" id="prevWeek">‹</button>
+                        <button class="btn_pasar_mes" id="nextWeek">›</button>
+                    </div>
+                    <p id="texto_mes"></p>
+                </div>
+                <!-- <div class="info_right">
             <button class="update_actividad" id="actualizar_actividad_fecha">Actualizar actividad</button>
         </div> -->
-        <div class="info_right">
-            <img src="logo_50_aniversario.jpg">
-        </div>
-    </header>
-
-    <section class="calendar">
-        <div class="nombre_dias_semana">
-            <label class="label_name_day">Domíngo</label>
-            <label class="label_name_day">Lunes</label>
-            <label class="label_name_day">Martes</label>
-            <label class="label_name_day">Miércoles</label>
-            <label class="label_name_day">Jueves</label>
-            <label class="label_name_day">Viernes</label>
-            <label class="label_name_day">Sábado</label>
-        </div>
-        <div class="calendar_grid" id="calendar_grid">
-            <div class="day_tag">
-                <h1 class="date_label">01</h1>
-                <div class="actividad">
-                    <h4>Lorem, ipsum dolor.</h4>
-                    <h4 class="hora">00:00:00 a. m.</h4>
-                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Obcaecati qui repudiandae quo deserunt aliquam pariatur saepe sint minus. Obcaecati, nostrum?</p>
+                <div class="info_right">
+                    <img src="logo_50_aniversario.jpg" />
                 </div>
-                <div class="actividad">
-                    <h4>Lorem, ipsum dolor.</h4>
-                    <h4 class="hora">00:00:00 p. m.</h4>
-                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Obcaecati qui repudiandae quo deserunt aliquam pariatur saepe sint minus. Obcaecati, nostrum?</p>
+            </header>
+
+            <section class="calendar">
+                <div class="nombre_dias_semana">
+                    <label class="label_name_day">Domíngo</label>
+                    <label class="label_name_day">Lunes</label>
+                    <label class="label_name_day">Martes</label>
+                    <label class="label_name_day">Miércoles</label>
+                    <label class="label_name_day">Jueves</label>
+                    <label class="label_name_day">Viernes</label>
+                    <label class="label_name_day">Sábado</label>
+                </div>
+                <div class="calendar_grid" id="calendar_grid">
+                    <div class="day_tag">
+                        <h1 class="date_label">01</h1>
+                        <div class="actividad">
+                            <h4>Lorem, ipsum dolor.</h4>
+                            <h4 class="hora">00:00:00 a. m.</h4>
+                            <p>
+                                Lorem ipsum, dolor sit amet consectetur
+                                adipisicing elit. Obcaecati qui repudiandae quo
+                                deserunt aliquam pariatur saepe sint minus.
+                                Obcaecati, nostrum?
+                            </p>
+                        </div>
+                        <div class="actividad">
+                            <h4>Lorem, ipsum dolor.</h4>
+                            <h4 class="hora">00:00:00 p. m.</h4>
+                            <p>
+                                Lorem ipsum, dolor sit amet consectetur
+                                adipisicing elit. Obcaecati qui repudiandae quo
+                                deserunt aliquam pariatur saepe sint minus.
+                                Obcaecati, nostrum?
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="logo_footer">
+                    <img src="logo_50_aniversario.jpg" />
+                </div>
+            </section>
+            <br />
+            <div id="modal" class="modal">
+                <div class="modal-content">
+                    <span id="closeModal" class="close">&times;</span>
+                    <h2 id="modalDate"></h2>
+                    <div id="modalActivities"></div>
                 </div>
             </div>
-        </div>
-        <div class="logo_footer">
-            <img src="logo_50_aniversario.jpg">
-        </div>
-    </section>
-  </main>
-</div>
-<div id="modal" class="modal">
-  <div class="modal-content">
-    <span id="closeModal" class="close">&times;</span>
-    <h2 id="modalDate"></h2>
-    <div id="modalActivities"></div>
-  </div>
-</div>
-
-<script src="funciones.js"></script>
-</body>
+            <!--button id="btnDescargarPDF" class="btn_pdf">
+                Descargar calendario de actividades en PDF
+            </button -->
+            <footer class="calendar_footer">
+                <p>
+                    © 2025 Hermandad Del Santo Entierro De Cristo, Usulután —
+                    Todos los derechos reservados
+                </p>
+            </footer>
+        </main>
+        <script src="funciones.js"></script>
+    </body>
 </html>
