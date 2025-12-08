@@ -349,13 +349,14 @@ const cargar_funciones = async () => {
     await cargarCalendario();
     await agregarContadores();
     await configurarModal();
-    await activarSwipeCalendario();
     await marcarDiaActual();
 };
 
-// Cargamos.
-cargar_funciones();
-
+// Cargamos...
+document.addEventListener("DOMContentLoaded", () => {
+    activarSwipeCalendario();
+    cargar_funciones();
+});
 document.getElementById("prevWeek").addEventListener("click", () => {
     if (mesActual > 1) {
         mesActual--;
