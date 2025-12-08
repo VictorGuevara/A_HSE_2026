@@ -286,6 +286,7 @@ function activarSwipeCalendario() {
 
     let touchStartX = 0;
     let touchEndX = 0;
+    let swipeBloqueado = false; // ✅ evita saltos múltiples
 
     calendar.addEventListener("touchstart", (e) => {
         touchStartX = e.changedTouches[0].screenX;
@@ -297,10 +298,14 @@ function activarSwipeCalendario() {
     });
 
     function manejarSwipe() {
+        if (swipeBloqueado) return; // ✅ evita múltiples ejecuciones
+
         const distancia = touchEndX - touchStartX;
 
-        // Sensibilidad del swipe (puedes ajustarla)
+        // Sensibilidad del swipe
         if (Math.abs(distancia) < 50) return;
+
+        swipeBloqueado = true; // ✅ bloquear
 
         if (distancia < 0) {
             // 👉 Swipe izquierda → mes siguiente
@@ -310,7 +315,6 @@ function activarSwipeCalendario() {
                 mesActual = 1;
                 añoActual++;
             }
-            cargar_funciones();
         } else {
             // 👈 Swipe derecha → mes anterior
             if (mesActual > 1) {
@@ -319,8 +323,14 @@ function activarSwipeCalendario() {
                 mesActual = 12;
                 añoActual--;
             }
-            cargar_funciones();
         }
+
+        cargar_funciones();
+
+        // ✅ desbloquear después de un pequeño delay
+        setTimeout(() => {
+            swipeBloqueado = false;
+        }, 300);
     }
 }
 

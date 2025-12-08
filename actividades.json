@@ -104,6 +104,11 @@
       "titulo": "Miércoles de Ceniza",
       "hora": "00:00:00 a. m. - 11:59:59 p. m.",
       "descripcion": "La parroquia inicia el camino cuaresmal con la imposición de ceniza, invitando a la comunidad a la conversión, la oración y la preparación espiritual hacia la Pascua del Señor."
+    },
+    {
+      "titulo": "Venta de Tortas de Pescado",
+      "hora": "07:00:00 a. m. - 05:00:00 p. m.",
+      "descripcion": "La Hermandad realiza la venta de tortas de pescado durante el Miércoles de Ceniza para recaudar fondos destinados al fortalecimiento de las actividades parroquiales y comunitarias."
     }
   ],
 
@@ -229,11 +234,6 @@
 
   "2026-04-05": [
     {
-      "titulo": "Asamblea General de la Hermandad",
-      "hora": "10:00:00 a. m.",
-      "descripcion": "Asamblea general mensual de la Hermandad, fortaleciendo la unidad, organización y servicio comunitario."
-    },
-    {
       "titulo": "Domingo de Resurrección",
       "hora": "00:00:00 a. m. - 11:59:59 p. m.",
       "descripcion": "Celebramos con alegría la Resurrección del Señor, renovando la esperanza de nuestra parroquia y fortaleciendo la misión de la Hermandad al servicio de Cristo resucitado."
@@ -329,11 +329,6 @@
       "titulo": "Solemnidad de la Santísima Trinidad",
       "hora": "00:00:00 a. m. - 11:59:59 p. m.",
       "descripcion": "La parroquia celebra la Santísima Trinidad, reconociendo el amor del Padre, la gracia del Hijo y la fuerza del Espíritu Santo en nuestra vida comunitaria."
-    },
-    {
-      "titulo": "Venta de Pupusas de la Hermandad",
-      "hora": "00:00:00 a. m. - 11:59:59 p. m.",
-      "descripcion": "La Hermandad realiza su venta de pupusas para apoyar las necesidades de la parroquia, fortaleciendo la unidad y el servicio comunitario."
     },
     {
       "titulo": "Clausura del Mes de la Virgen María",
@@ -581,10 +576,92 @@
       "titulo": "Santa Teresa de Calcuta",
       "hora": "00:00:00 a. m. - 11:59:59 p. m.",
       "descripcion": "La comunidad recuerda a Santa Teresa de Calcuta, ejemplo de servicio, humildad y amor a los más necesitados."
+    },
+    {
+      "titulo": "Juegos Mecánicos — Día 1",
+      "hora": "10:00:00 a. m. - 09:00:00 p. m.",
+      "descripcion": "Inicio de la jornada de juegos mecánicos para recaudar fondos en beneficio de la Hermandad del Santo Entierro de Cristo."
+    }
+  ],
+
+  "2026-09-06": [
+    {
+      "titulo": "Juegos Mecánicos — Día 2",
+      "hora": "10:00:00 a. m. - 09:00:00 p. m.",
+      "descripcion": "Segundo día de juegos mecánicos para apoyar las actividades y proyectos de la Hermandad."
+    }
+  ],
+
+  "2026-09-07": [
+    {
+      "titulo": "Juegos Mecánicos — Día 3",
+      "hora": "10:00:00 a. m. - 09:00:00 p. m.",
+      "descripcion": "Tercer día de juegos mecánicos para recaudar fondos destinados al servicio comunitario de la Hermandad."
+    }
+  ],
+
+  "2026-09-08": [
+    {
+      "titulo": "Juegos Mecánicos — Día 4",
+      "hora": "10:00:00 a. m. - 09:00:00 p. m.",
+      "descripcion": "Cuarto día de juegos mecánicos en apoyo a las obras y actividades de la Hermandad."
+    }
+  ],
+
+  "2026-09-09": [
+    {
+      "titulo": "Juegos Mecánicos — Día 5",
+      "hora": "10:00:00 a. m. - 09:00:00 p. m.",
+      "descripcion": "Quinto día de juegos mecánicos para recaudar fondos para la Hermandad."
+    }
+  ],
+
+  "2026-09-10": [
+    {
+      "titulo": "Juegos Mecánicos — Día 6",
+      "hora": "10:00:00 a. m. - 09:00:00 p. m.",
+      "descripcion": "Sexto día de juegos mecánicos para apoyar las actividades de la Hermandad."
+    }
+  ],
+
+  "2026-09-11": [
+    {
+      "titulo": "Juegos Mecánicos — Día 7",
+      "hora": "10:00:00 a. m. - 09:00:00 p. m.",
+      "descripcion": "Séptimo día de juegos mecánicos para recaudar fondos para la Hermandad."
+    }
+  ],
+
+  "2026-09-12": [
+    {
+      "titulo": "Juegos Mecánicos — Día 8",
+      "hora": "10:00:00 a. m. - 09:00:00 p. m.",
+      "descripcion": "Octavo día de juegos mecánicos en beneficio de la Hermandad."
+    }
+  ],
+
+  "2026-09-13": [
+    {
+      "titulo": "Juegos Mecánicos — Día 9",
+      "hora": "10:00:00 a. m. - 09:00:00 p. m.",
+      "descripcion": "Noveno día de juegos mecánicos para apoyar las obras de la Hermandad."
+    }
+  ],
+
+  "2026-09-14": [
+    {
+      "titulo": "Juegos Mecánicos — Día 10",
+      "hora": "10:00:00 a. m. - 09:00:00 p. m.",
+      "descripcion": "Décimo día de juegos mecánicos para recaudar fondos para la Hermandad."
     }
   ],
 
   "2026-09-15": [
+    {
+      "titulo": "Juegos Mecánicos — Día 11 (Clausura)",
+      "hora": "10:00:00 a. m. - 09:00:00 p. m.",
+      "descripcion": "Último día de juegos mecánicos, concluyendo la jornada de recaudación de fondos para la Hermandad del Santo Entierro de Cristo."
+    },
     {
       "titulo": "Procesión Dolores de María",
       "hora": "00:00:00 a. m. - 11:59:59 p. m.",
