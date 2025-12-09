@@ -427,5 +427,9 @@ document.addEventListener("keydown", (e) => {
 document
     .getElementById("btnDescargarPDF")
     .addEventListener("click", async () => {
-        await descargarPDF();
+        // await descargarPDF();
+        const link = document.createElement("a");
+        link.href = "programacion_2026.pdf"; // ruta del PDF subido
+        link.download = "programacion_2026.pdf"; // nombre del archivo al descargar
+        link.click();
     });
