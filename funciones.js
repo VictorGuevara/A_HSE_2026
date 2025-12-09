@@ -352,6 +352,37 @@ const cargar_funciones = async () => {
     await marcarDiaActual();
 };
 
+// Función que descarga el pdf.
+let permitirDescarga = false;
+
+window.addEventListener("message", (event) => {
+    if (permitirDescarga && event.data?.tipo === "PDF_LISTO") {
+        console.log("✅ PDF listo, generando…");
+
+        const iframe = document.getElementById("visorPDF");
+        const doc = iframe.contentDocument;
+        const contenido = doc.getElementById("contenedor_pdf");
+
+        const opciones = {
+            margin: 0,
+            filename: "programacion_2026.pdf",
+            image: { type: "jpeg", quality: 0.98 },
+            html2canvas: { scale: 2 },
+            jsPDF: { unit: "pt", format: "letter", orientation: "portrait" },
+        };
+
+        html2pdf().set(opciones).from(contenido).save();
+
+        permitirDescarga = false; // ✅ evitar descargas automáticas
+    }
+});
+
+function descargarPDF() {
+    permitirDescarga = true; // ✅ permitir descarga
+    const iframe = document.getElementById("visorPDF");
+    iframe.src = iframe.src; // ✅ recargar iframe
+}
+
 // Cargamos...
 document.addEventListener("DOMContentLoaded", () => {
     activarSwipeCalendario();
@@ -392,3 +423,9 @@ document.addEventListener("keydown", (e) => {
         cargar_funciones();
     }
 });
+
+document
+    .getElementById("btnDescargarPDF")
+    .addEventListener("click", async () => {
+        await descargarPDF();
+    });

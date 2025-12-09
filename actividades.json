@@ -292,6 +292,29 @@
       "titulo": "Día de la Virgen de Fátima",
       "hora": "00:00:00 a. m. - 11:59:59 p. m.",
       "descripcion": "La parroquia honra a la Virgen de Fátima, confiando en su intercesión maternal y renovando la devoción que tantos fieles mantienen con profundo amor."
+    },
+    {
+      "titulo": "Rosario de la Hermandad",
+      "hora": "5:30 a. m.",
+      "descripcion": "La Hermandad dirige el Rosario de Aurora, ofreciendo este momento de oración por las necesidades de la comunidad y el fortalecimiento espiritual del grupo."
+    },
+    {
+      "titulo": "Rosario de la Hermandad",
+      "hora": "4:30 p. m.",
+      "descripcion": "Delegados de la Hermandad acompañan el rezo del Rosario vespertino, honrando a la Virgen María y animando a la comunidad a vivir la devoción mariana."
+    }
+  ],
+
+  "2026-05-20": [
+    {
+      "titulo": "Rosario de la Hermandad",
+      "hora": "5:30 a. m.",
+      "descripcion": "La Hermandad dirige el Rosario de Aurora, ofreciendo este momento de oración por las necesidades de la comunidad y el fortalecimiento espiritual del grupo."
+    },
+    {
+      "titulo": "Rosario de la Hermandad",
+      "hora": "4:30 p. m.",
+      "descripcion": "Delegados de la Hermandad acompañan el rezo del Rosario vespertino, honrando a la Virgen María y animando a la comunidad a vivir la devoción mariana."
     }
   ],
 
@@ -321,6 +344,16 @@
       "titulo": "50° Aniversario de la Hermandad",
       "hora": "00:00:00 a. m. - 11:59:59 p. m.",
       "descripcion": "La Hermandad del Santo Entierro de Cristo celebra 50 años de servicio, fe y tradición, agradeciendo a Dios por su guía y a la comunidad por su apoyo."
+    },
+    {
+      "titulo": "Rosario de la Hermandad",
+      "hora": "5:30 a. m.",
+      "descripcion": "La Hermandad dirige el Rosario de Aurora, ofreciendo este momento de oración por las necesidades de la comunidad y el fortalecimiento espiritual del grupo."
+    },
+    {
+      "titulo": "Rosario de la Hermandad",
+      "hora": "4:30 p. m.",
+      "descripcion": "Delegados de la Hermandad acompañan el rezo del Rosario vespertino, honrando a la Virgen María y animando a la comunidad a vivir la devoción mariana."
     }
   ],
 
@@ -334,6 +367,16 @@
       "titulo": "Clausura del Mes de la Virgen María",
       "hora": "4:30 p. m.",
       "descripcion": "La comunidad concluye el mes mariano agradeciendo a la Virgen por su protección y presentando nuestras intenciones en un acto de fe y devoción."
+    },
+    {
+      "titulo": "Santo Rosario",
+      "hora": "5:30 a. m.",
+      "descripcion": "Delegados de la Hermandad acompañan el rezo del Rosario matutino, honrando a la Virgen María y animando a la comunidad a vivir la devoción mariana."
+    },
+    {
+      "titulo": "Santo Rosario",
+      "hora": "4:30 p. m.",
+      "descripcion": "Delegados de la Hermandad acompañan el rezo del Rosario vespertino, honrando a la Virgen María y animando a la comunidad a vivir la devoción mariana."
     }
   ],
 

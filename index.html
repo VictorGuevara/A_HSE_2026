@@ -3,7 +3,8 @@
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Document</title>
+        <title>HSEDC-U</title>
+        <link rel="icon" type="image/x-icon" href="logo_50_aniversario.ico" />
         <link rel="stylesheet" href="estilos.css" />
     </head>
     <body>
@@ -72,9 +73,9 @@
                     <div id="modalActivities"></div>
                 </div>
             </div>
-            <!--button id="btnDescargarPDF" class="btn_pdf">
+            <button id="btnDescargarPDF" class="btn_pdf">
                 Descargar calendario de actividades en PDF
-            </button -->
+            </button>
             <footer class="calendar_footer">
                 <p>
                     © 2025 Hermandad Del Santo Entierro De Cristo, Usulután —
@@ -82,6 +83,13 @@
                 </p>
             </footer>
         </main>
+        <iframe
+            id="visorPDF"
+            src="a_hsedc_u_2026.html"
+            style="display: none"
+        ></iframe>
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
         <script src="funciones.js"></script>
     </body>
 </html>

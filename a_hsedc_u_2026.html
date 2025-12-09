@@ -1,0 +1,357 @@
+<!doctype html>
+<html lang="es">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>PDF</title>
+		<style>
+			@import url("https://fonts.googleapis.com/css2?family=Arimo:ital,wght@0,400..700;1,400..700&family=Medula+One&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
+
+			:root {
+				--color_dorado: rgba(185, 146, 29, 1);
+				--color_morado: rgba(112, 21, 135, 1);
+				--color_blanco: rgba(255, 255, 255, 1);
+				--gris_ultra_claro: rgba(231, 231, 231, 1);
+			}
+
+			@page {
+				size: letter;
+				margin: 0;
+			}
+
+			/* ✅ Cada página real */
+			section.pagina {
+				font-family: "Arimo", sans-serif;
+				font-optical-sizing: auto;
+				font-style: normal;
+				width: 816px;
+				height: 1056px; /* ✅ altura fija tipo carta */
+				margin: 0 auto;
+				padding: 40px 40px 40px 30px; /* ✅ margen amplio */
+				box-sizing: border-box;
+				background: var(--color_blanco);
+				overflow: hidden;
+			}
+
+			/* ✅ Saltos limpios */
+			section.pagina + section.pagina {
+				page-break-before: always;
+			}
+
+			/* ✅ Portada */
+			.portada {
+				display: flex;
+				flex-direction: column;
+				justify-content: center;
+				align-items: center;
+				text-align: center;
+				height: 100%;
+			}
+
+			.portada .logo img {
+				width: 75%;
+				height: auto;
+			}
+
+			.titulo_portada {
+				font-size: 35px;
+				font-weight: bold;
+				color: var(--color_dorado);
+				margin-top: 20px;
+				max-width: 800px;
+			}
+
+			/* ✅ Título del mes */
+			.nombre_mes {
+				width: 100%;
+				text-align: center;
+				margin-bottom: 20px;
+			}
+
+			.nombre_mes h1 {
+				font-size: 22px;
+				margin: 0;
+				font-weight: bold;
+				color: var(--color_morado);
+			}
+
+			.nombre_mes p {
+				font-size: 14px;
+				margin-top: 10px;
+				max-width: 700px;
+				margin-left: auto;
+				margin-right: auto;
+				line-height: 1.4;
+			}
+
+			/* ✅ Filas */
+			.dias_mes_actividades {
+				width: 100%;
+				box-sizing: border-box;
+				padding: 5px 8px;
+				margin-bottom: 4px;
+				background: var(--color_blanco);
+				border-left: 3px solid var(--color_morado);
+				box-shadow: 0 0 5px var(--gris_ultra_claro);
+				border-radius: 10px;
+				font-size: 12px;
+				page-break-inside: avoid;
+				break-inside: avoid;
+			}
+
+			.fecha_nombre_dia h5 {
+				font-weight: bold;
+				margin: 0 0 6px 0;
+			}
+
+			.desglose_actividades_fecha {
+				margin-bottom: 4px;
+			}
+
+			.desglose_actividades_fecha h5 {
+				margin: 0;
+				font-weight: normal;
+			}
+
+			.detalle_actividad {
+				margin: 2px 0 0 0;
+				line-height: 1.3;
+			}
+		</style>
+	</head>
+
+	<body>
+		<div id="contenedor_pdf"></div>
+
+		<script>
+			/* ------------------ UTILIDADES ------------------ */
+
+			function formatearFecha(fechaISO) {
+				const [año, mes, dia] = fechaISO.split("-");
+				return `${dia}-${mes}-${año}`;
+			}
+
+			function obtenerNombreMes(mes) {
+				const nombres = [
+					"Enero",
+					"Febrero",
+					"Marzo",
+					"Abril",
+					"Mayo",
+					"Junio",
+					"Julio",
+					"Agosto",
+					"Septiembre",
+					"Octubre",
+					"Noviembre",
+					"Diciembre",
+				];
+				return nombres[parseInt(mes) - 1];
+			}
+
+			function obtenerNumeroMes(nombreMes) {
+				const nombres = {
+					Enero: 1,
+					Febrero: 2,
+					Marzo: 3,
+					Abril: 4,
+					Mayo: 5,
+					Junio: 6,
+					Julio: 7,
+					Agosto: 8,
+					Septiembre: 9,
+					Octubre: 10,
+					Noviembre: 11,
+					Diciembre: 12,
+				};
+				return nombres[nombreMes];
+			}
+
+			function obtenerNombreDia(fecha) {
+				const dias = [
+					"Domingo",
+					"Lunes",
+					"Martes",
+					"Miércoles",
+					"Jueves",
+					"Viernes",
+					"Sábado",
+				];
+				return dias[new Date(fecha).getDay()];
+			}
+
+			function obtenerDiasDelMes(año, mesNumero) {
+				const dias = [];
+				const total = new Date(año, mesNumero, 0).getDate();
+				for (let d = 1; d <= total; d++) {
+					dias.push(
+						`${año}-${String(mesNumero).padStart(2, "0")}-${String(d).padStart(2, "0")}`,
+					);
+				}
+				return dias;
+			}
+
+			function agruparPorMes(json) {
+				const meses = {};
+				Object.keys(json).forEach((key) => {
+					if (key === "info_meses") return;
+					const [año, mes] = key.split("-");
+					const nombreMes = obtenerNombreMes(mes);
+					if (!meses[nombreMes]) meses[nombreMes] = {};
+					meses[nombreMes][key] = json[key];
+				});
+				return meses;
+			}
+
+			/* ------------------ GENERADORES ------------------ */
+
+			function generarPortada() {
+				const pagina = document.createElement("section");
+				pagina.classList.add("pagina");
+
+				pagina.innerHTML = `
+                <div class="portada">
+                    <div class="logo">
+                        <img src="logo_50_aniversario.jpg" />
+                    </div>
+                    <h2 class="titulo_portada">
+                        Programación de actividades para el año 2026 de la Hermandad Del Santo Entierro De Cristo, Usulután.
+                    </h2>
+                </div>
+            `;
+
+				return pagina;
+			}
+
+			function generarFilaDia(fecha, nombreDia, actividades) {
+				if (actividades.length === 0) {
+					actividades = [{ titulo: "-", hora: "", descripcion: "-" }];
+				}
+
+				let actividadesHTML = actividades
+					.map(
+						(act) => `
+                <div class="desglose_actividades_fecha">
+                    <h5>${act.titulo} ${act.hora ? `(${act.hora})` : ""}</h5>
+                    <p class="detalle_actividad">${act.descripcion}</p>
+                </div>
+            `,
+					)
+					.join("");
+
+				return `
+                <div class="dias_mes_actividades">
+                    <div class="fecha_nombre_dia">
+                        <h5>${formatearFecha(fecha)} - ${nombreDia}</h5>
+                    </div>
+                    ${actividadesHTML}
+                </div>
+            `;
+			}
+
+			function crearPaginaMes(nombreMes, año, incluirTitulo = true) {
+				const pagina = document.createElement("section");
+				pagina.classList.add("pagina");
+
+				let html = "";
+
+				if (incluirTitulo) {
+					html += `
+                    <div class="nombre_mes">
+                        <h1>${nombreMes} - ${año}</h1>
+                        <p>Programación de actividades para el mes de ${nombreMes}</p>
+                    </div>
+                `;
+				}
+
+				html += `<div class="filas"></div>`;
+				pagina.innerHTML = html;
+
+				return pagina;
+			}
+
+			/* ------------------ ALGORITMO INTELIGENTE POR ALTURA ------------------ */
+
+			function generarPaginasPorAltura(nombreMes, año, datosMes) {
+				const contenedor = document.getElementById("contenedor_pdf");
+				const mesNumero = obtenerNumeroMes(nombreMes);
+				const dias = obtenerDiasDelMes(año, mesNumero);
+
+				// Primera página con título
+				let pagina = crearPaginaMes(nombreMes, año, true);
+				let filasContainer = pagina.querySelector(".filas");
+				contenedor.appendChild(pagina);
+
+				// Medir altura del título
+				const titulo = pagina.querySelector(".nombre_mes");
+				const alturaTitulo = titulo ? titulo.offsetHeight : 0;
+
+				// Altura útil para filas
+				const ALTURA_MAX_FILAS = 1056 - alturaTitulo - 120;
+
+				dias.forEach((fecha) => {
+					const actividades = datosMes[fecha] || [];
+					const nombreDia = obtenerNombreDia(fecha);
+
+					const filaHTML = generarFilaDia(
+						fecha,
+						nombreDia,
+						actividades,
+					);
+					const temp = document.createElement("div");
+					temp.innerHTML = filaHTML;
+					const filaNodo = temp.firstElementChild;
+
+					filasContainer.appendChild(filaNodo);
+
+					const alturaFilas = filasContainer.offsetHeight;
+
+					if (alturaFilas > ALTURA_MAX_FILAS) {
+						filasContainer.removeChild(filaNodo);
+
+						const nuevaPagina = crearPaginaMes(
+							nombreMes,
+							año,
+							false,
+						);
+						nuevaPagina.style.pageBreakBefore = "always";
+
+						contenedor.appendChild(nuevaPagina);
+
+						filasContainer = nuevaPagina.querySelector(".filas");
+						filasContainer.appendChild(filaNodo);
+
+						pagina = nuevaPagina;
+					}
+				});
+			}
+
+			/* ------------------ CONTROLADOR PRINCIPAL ------------------ */
+
+			function generarPDFCompleto(json) {
+				const contenedor = document.getElementById("contenedor_pdf");
+
+				contenedor.appendChild(generarPortada());
+
+				const meses = agruparPorMes(json);
+
+				Object.keys(meses).forEach((nombreMes) => {
+					generarPaginasPorAltura(nombreMes, 2026, meses[nombreMes]);
+				});
+
+				// ✅ Esperar a que el DOM termine de renderizar
+				setTimeout(() => {
+					window.parent.postMessage({ tipo: "PDF_LISTO" }, "*");
+				}, 2000);
+			}
+
+			async function cargarJSON() {
+				const response = await fetch("actividades.json");
+				const json = await response.json();
+				generarPDFCompleto(json);
+			}
+
+			cargarJSON();
+		</script>
+	</body>
+</html>
