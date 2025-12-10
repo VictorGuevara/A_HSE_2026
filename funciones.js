@@ -352,42 +352,13 @@ const cargar_funciones = async () => {
     await marcarDiaActual();
 };
 
-// Función que descarga el pdf.
-let permitirDescarga = false;
-
-window.addEventListener("message", (event) => {
-    if (permitirDescarga && event.data?.tipo === "PDF_LISTO") {
-        console.log("✅ PDF listo, generando…");
-
-        const iframe = document.getElementById("visorPDF");
-        const doc = iframe.contentDocument;
-        const contenido = doc.getElementById("contenedor_pdf");
-
-        const opciones = {
-            margin: 0,
-            filename: "programacion_2026.pdf",
-            image: { type: "jpeg", quality: 0.98 },
-            html2canvas: { scale: 2 },
-            jsPDF: { unit: "pt", format: "letter", orientation: "portrait" },
-        };
-
-        html2pdf().set(opciones).from(contenido).save();
-
-        permitirDescarga = false; // ✅ evitar descargas automáticas
-    }
-});
-
-function descargarPDF() {
-    permitirDescarga = true; // ✅ permitir descarga
-    const iframe = document.getElementById("visorPDF");
-    iframe.src = iframe.src; // ✅ recargar iframe
-}
-
 // Cargamos...
 document.addEventListener("DOMContentLoaded", () => {
     activarSwipeCalendario();
     cargar_funciones();
+    cargarJSON();
 });
+
 document.getElementById("prevWeek").addEventListener("click", () => {
     if (mesActual > 1) {
         mesActual--;
@@ -424,12 +395,225 @@ document.addEventListener("keydown", (e) => {
     }
 });
 
-document
-    .getElementById("btnDescargarPDF")
-    .addEventListener("click", async () => {
-        // await descargarPDF();
-        const link = document.createElement("a");
-        link.href = "Programacion_HSE_2026.pdf"; // ruta del PDF subido
-        link.download = "Programacion_HSE_2026.pdf"; // nombre del archivo al descargar
-        link.click();
+// PDF
+
+/* ------------------ UTILIDADES ------------------ */
+
+function formatearFecha(fechaISO) {
+    const [año, mes, dia] = fechaISO.split("-");
+    return `${dia}-${mes}-${año}`;
+}
+
+function obtenerNombreMes(mes) {
+    const nombres = [
+        "Enero",
+        "Febrero",
+        "Marzo",
+        "Abril",
+        "Mayo",
+        "Junio",
+        "Julio",
+        "Agosto",
+        "Septiembre",
+        "Octubre",
+        "Noviembre",
+        "Diciembre",
+    ];
+    return nombres[parseInt(mes) - 1];
+}
+
+function obtenerNumeroMes(nombreMes) {
+    const nombres = {
+        Enero: 1,
+        Febrero: 2,
+        Marzo: 3,
+        Abril: 4,
+        Mayo: 5,
+        Junio: 6,
+        Julio: 7,
+        Agosto: 8,
+        Septiembre: 9,
+        Octubre: 10,
+        Noviembre: 11,
+        Diciembre: 12,
+    };
+    return nombres[nombreMes];
+}
+
+function obtenerNombreDia(fecha) {
+    const dias = [
+        "Domingo",
+        "Lunes",
+        "Martes",
+        "Miércoles",
+        "Jueves",
+        "Viernes",
+        "Sábado",
+    ];
+    return dias[new Date(fecha).getDay()];
+}
+
+function obtenerDiasDelMes(año, mesNumero) {
+    const dias = [];
+    const total = new Date(año, mesNumero, 0).getDate();
+    for (let d = 1; d <= total; d++) {
+        dias.push(
+            `${año}-${String(mesNumero).padStart(2, "0")}-${String(d).padStart(2, "0")}`,
+        );
+    }
+    return dias;
+}
+
+function agruparPorMes(json) {
+    const meses = {};
+    Object.keys(json).forEach((key) => {
+        if (key === "info_meses") return;
+        const [año, mes] = key.split("-");
+        const nombreMes = obtenerNombreMes(mes);
+        if (!meses[nombreMes]) meses[nombreMes] = {};
+        meses[nombreMes][key] = json[key];
     });
+    return meses;
+}
+
+/* ------------------ GENERADORES ------------------ */
+
+function generarPortada() {
+    const pagina = document.createElement("section");
+    pagina.classList.add("pagina");
+
+    pagina.innerHTML = `
+                <div class="portada">
+                    <div class="logo">
+                        <img src="logo_50_aniversario.jpg" />
+                    </div>
+                    <h2 class="titulo_portada">
+                        Programación de actividades para el año 2026 de la Hermandad Del Santo Entierro De Cristo, Usulután.
+                    </h2>
+                </div>
+            `;
+
+    return pagina;
+}
+
+function generarFilaDia(fecha, nombreDia, actividades) {
+    if (actividades.length === 0) {
+        actividades = [{ titulo: "-", hora: "", descripcion: "-" }];
+    }
+
+    let actividadesHTML = actividades
+        .map(
+            (act) => `
+                <div class="desglose_actividades_fecha">
+                    <h5>${act.titulo} ${act.hora ? `(${act.hora})` : ""}</h5>
+                    <p class="detalle_actividad">${act.descripcion}</p>
+                </div>
+            `,
+        )
+        .join("");
+
+    return `
+                <div class="dias_mes_actividades">
+                    <div class="fecha_nombre_dia">
+                        <h5>${formatearFecha(fecha)} - ${nombreDia}</h5>
+                    </div>
+                    ${actividadesHTML}
+                </div>
+            `;
+}
+
+function crearPaginaMes(nombreMes, año, incluirTitulo = true) {
+    const pagina = document.createElement("section");
+    pagina.classList.add("pagina");
+
+    let html = "";
+
+    if (incluirTitulo) {
+        html += `
+                    <div class="nombre_mes">
+                        <h1>${nombreMes} - ${año}</h1>
+                        <p>Programación de actividades para el mes de ${nombreMes}</p>
+                    </div>
+                `;
+    }
+
+    html += `<div class="filas"></div>`;
+    pagina.innerHTML = html;
+
+    return pagina;
+}
+
+/* ------------------ ALGORITMO INTELIGENTE POR ALTURA ------------------ */
+
+function generarPaginasPorAltura(nombreMes, año, datosMes) {
+    const contenedor = document.getElementById("contenedor_pdf");
+    const mesNumero = obtenerNumeroMes(nombreMes);
+    const dias = obtenerDiasDelMes(año, mesNumero);
+
+    // Primera página con título
+    let pagina = crearPaginaMes(nombreMes, año, true);
+    let filasContainer = pagina.querySelector(".filas");
+    contenedor.appendChild(pagina);
+
+    // Medir altura del título
+    const titulo = pagina.querySelector(".nombre_mes");
+    const alturaTitulo = titulo ? titulo.offsetHeight : 0;
+
+    // Altura útil para filas
+    const ALTURA_MAX_FILAS = 1056 - alturaTitulo - 120;
+
+    dias.forEach((fecha) => {
+        const actividades = datosMes[fecha] || [];
+        const nombreDia = obtenerNombreDia(fecha);
+
+        const filaHTML = generarFilaDia(fecha, nombreDia, actividades);
+        const temp = document.createElement("div");
+        temp.innerHTML = filaHTML;
+        const filaNodo = temp.firstElementChild;
+
+        filasContainer.appendChild(filaNodo);
+
+        const alturaFilas = filasContainer.offsetHeight;
+
+        if (alturaFilas > ALTURA_MAX_FILAS) {
+            filasContainer.removeChild(filaNodo);
+
+            const nuevaPagina = crearPaginaMes(nombreMes, año, false);
+            nuevaPagina.style.pageBreakBefore = "always";
+
+            contenedor.appendChild(nuevaPagina);
+
+            filasContainer = nuevaPagina.querySelector(".filas");
+            filasContainer.appendChild(filaNodo);
+
+            pagina = nuevaPagina;
+        }
+    });
+}
+
+/* ------------------ CONTROLADOR PRINCIPAL ------------------ */
+
+function generarPDFCompleto(json) {
+    const contenedor = document.getElementById("contenedor_pdf");
+
+    // ✅ Limpiar antes de generar
+    contenedor.innerHTML = "";
+
+    contenedor.appendChild(generarPortada());
+
+    const meses = agruparPorMes(json);
+
+    Object.keys(meses).forEach((nombreMes) => {
+        generarPaginasPorAltura(nombreMes, 2026, meses[nombreMes]);
+    });
+}
+
+async function cargarJSON() {
+    const response = await fetch("actividades.json");
+    const json = await response.json();
+    generarPDFCompleto(json);
+}
+
+document.getElementById("btnDescargarPDF").addEventListener("click", () => {
+    window.print();
+});
