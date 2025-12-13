@@ -14,6 +14,14 @@
     "diciembre": "Diciembre es un mes de alegría y preparación espiritual. La Hermandad acompaña a la parroquia en el Adviento y en la celebración del nacimiento del Señor, promoviendo la unidad, la caridad y el espíritu de servicio."
   },
 
+  "2026-01-01": [
+    {
+      "titulo": "Hora Santa como Hermandad",
+      "hora": "05:00:00 p. m. a 07:00:00 p. m.",
+      "descripcion": "La Hermandad dirige la Hora Santa para iniciar el año en adoración y oración comunitaria."
+    }
+  ],
+
   "2026-01-04": [
     {
       "titulo": "Primer Asamblea General",
@@ -80,6 +88,14 @@
       "titulo": "Virgen De Candelaria",
       "hora": "00:00:00 a. m. - 11:59:59 p. m.",
       "descripcion": "Procesión de nuestra Señora De Candelaria, en la ciudad de Jucuaran."
+    }
+  ],
+
+  "2026-02-08": [
+    {
+      "titulo": "Venta de pupusas",
+      "hora": "05:00:00 a. m. a 12:00:00 p. m.",
+      "descripcion": "Venta de pupusas para recaudar fondos exclusivamente para el grupo de la Hermandad durante las misas de la mañana."
     }
   ],
 
@@ -248,6 +264,14 @@
     }
   ],
 
+  "2026-04-26": [
+    {
+      "titulo": "Ornato del templo",
+      "hora": "00:00:00 a. m. a 11:59:59 p. m.",
+      "descripcion": "El grupo de la Hermandad realiza la limpieza del templo y el arreglo de flores para las misas del domingo; las flores permanecerán toda la semana."
+    }
+  ],
+
   "2026-05-01": [
     {
       "titulo": "Inicio del Mes de la Virgen María - Rosario de Aurora",
@@ -305,6 +329,14 @@
     }
   ],
 
+  "2026-05-17": [
+    {
+      "titulo": "Venta de pupusas",
+      "hora": "05:00:00 a. m. a 12:00:00 p. m.",
+      "descripcion": "Venta de pupusas para recaudar fondos exclusivamente para el grupo de la Hermandad durante las misas de la mañana."
+    }
+  ],
+
   "2026-05-20": [
     {
       "titulo": "Rosario de la Hermandad",
@@ -341,11 +373,6 @@
 
   "2026-05-27": [
     {
-      "titulo": "50° Aniversario de la Hermandad",
-      "hora": "00:00:00 a. m. - 11:59:59 p. m.",
-      "descripcion": "La Hermandad del Santo Entierro de Cristo celebra 50 años de servicio, fe y tradición, agradeciendo a Dios por su guía y a la comunidad por su apoyo."
-    },
-    {
       "titulo": "Rosario de la Hermandad",
       "hora": "5:30 a. m.",
       "descripcion": "La Hermandad dirige el Rosario de Aurora, ofreciendo este momento de oración por las necesidades de la comunidad y el fortalecimiento espiritual del grupo."
@@ -358,6 +385,11 @@
   ],
 
   "2026-05-31": [
+    {
+      "titulo": "50° Aniversario de la Hermandad",
+      "hora": "00:00:00 a. m. - 11:59:59 p. m.",
+      "descripcion": "La Hermandad del Santo Entierro de Cristo celebra 50 años de servicio, fe y tradición, agradeciendo a Dios por su guía y a la comunidad por su apoyo."
+    },
     {
       "titulo": "Solemnidad de la Santísima Trinidad",
       "hora": "00:00:00 a. m. - 11:59:59 p. m.",
@@ -458,6 +490,14 @@
       "titulo": "Rosario de la Hermandad",
       "hora": "5:30 a. m.",
       "descripcion": "La Hermandad ofrece el Rosario al Sagrado Corazón de Jesús pidiendo bendiciones especiales para todos los padres de nuestra comunidad."
+    }
+  ],
+
+  "2026-06-21": [
+    {
+      "titulo": "Ornato del templo",
+      "hora": "00:00:00 a. m. a 11:59:59 p. m.",
+      "descripcion": "El grupo de la Hermandad realiza la limpieza del templo y el arreglo de flores para las misas del domingo; las flores permanecerán toda la semana."
     }
   ],
 
@@ -603,6 +643,14 @@
       "titulo": "Tercer Día del Triduo de Rosarios de Aurora",
       "hora": "5:30 a. m.",
       "descripcion": "La comunidad concluye el triduo de Rosarios de Aurora en honor a la Asunción de la Virgen María, agradeciendo su protección y amor maternal."
+    }
+  ],
+
+  "2026-08-16": [
+    {
+      "titulo": "Ornato del templo",
+      "hora": "00:00:00 a. m. a 11:59:59 p. m.",
+      "descripcion": "El grupo de la Hermandad realiza la limpieza del templo y el arreglo de flores para las misas del domingo; las flores permanecerán toda la semana."
     }
   ],
 
@@ -759,6 +807,14 @@
     }
   ],
 
+  "2026-10-11": [
+    {
+      "titulo": "Ornato del templo",
+      "hora": "00:00:00 a. m. a 11:59:59 p. m.",
+      "descripcion": "El grupo de la Hermandad realiza la limpieza del templo y el arreglo de flores para las misas del domingo; las flores permanecerán toda la semana."
+    }
+  ],
+
   "2026-10-14": [
     {
       "titulo": "Rosario Misionero de la Hermandad - Aurora",
@@ -777,6 +833,11 @@
       "titulo": "DOMUND - Domingo Mundial de las Misiones",
       "hora": "00:00:00 a. m. - 11:59:59 p. m.",
       "descripcion": "La parroquia celebra el Domingo Mundial de las Misiones, orando por los misioneros y apoyando la labor evangelizadora de la Iglesia en todo el mundo."
+    },
+    {
+      "titulo": "Venta de pupusas",
+      "hora": "05:00:00 a. m. a 12:00:00 p. m.",
+      "descripcion": "Venta de pupusas para recaudar fondos exclusivamente para el grupo de la Hermandad durante las misas de la mañana."
     }
   ],
 
