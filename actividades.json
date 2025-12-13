@@ -136,6 +136,14 @@
     }
   ],
 
+  "2026-02-22": [
+    {
+      "titulo": "Ornato del templo",
+      "hora": "00:00:00 a. m. a 11:59:59 p. m.",
+      "descripcion": "El grupo de la Hermandad realiza la limpieza del templo y el arreglo de flores para las misas del domingo; las flores permanecerán toda la semana."
+    }
+  ],
+
   "2026-02-27": [
     {
       "titulo": "Segundo Viernes de Cuaresma",
@@ -935,6 +943,11 @@
       "titulo": "Jesucristo Rey del Universo",
       "hora": "00:00:00 a. m. - 11:59:59 p. m.",
       "descripcion": "La parroquia celebra la solemnidad de Jesucristo Rey del Universo, renovando la fe en Cristo como centro y Señor de nuestras vidas."
+    },
+    {
+      "titulo": "Ornato del templo",
+      "hora": "00:00:00 a. m. a 11:59:59 p. m.",
+      "descripcion": "El grupo de la Hermandad realiza la limpieza del templo y el arreglo de flores para las misas del domingo; las flores permanecerán toda la semana."
     }
   ],
 
