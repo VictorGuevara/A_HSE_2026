@@ -485,7 +485,7 @@ function generarPortada() {
     pagina.innerHTML = `
                 <div class="portada">
                     <div class="logo">
-                        <img src="logo_50_aniversario.jpg" />
+                        <img src="logo_50_aniversario.png" />
                     </div>
                     <h2 class="titulo_portada">
                         Programación de actividades para el año 2026 de la Hermandad Del Santo Entierro De Cristo, Usulután.
